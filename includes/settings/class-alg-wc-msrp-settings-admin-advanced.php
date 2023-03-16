@@ -133,6 +133,9 @@ class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
 				' href="' . add_query_arg( array( 'alg_wc_msrp_action' => $tool_action, 'alg_wc_msrp_wpnonce' => wp_create_nonce( $tool_action ) ), remove_query_arg( 'alg_wc_msrp_action_done' ) ) . '"' .
 				' onclick="return confirm(\'' . __( 'Are you sure?', 'msrp-for-woocommerce' ) . '\')">' . $tool_title . '</a>';
 		}
+		$tools[] = '<a class="button-primary"' .
+					' style="background: green; border-color: green; box-shadow: 0 1px 0 green; "' .
+					' href="' . admin_url( 'admin.php?page=bulk-msrp-price-converter-tool' ) . '">' . __( 'Bulk MSRP price converter tool', 'bulk-price-converter-for-woocommerce' ) . '</a>';
 		return $tools;
 	}
 
@@ -202,6 +205,13 @@ class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
 					'start' => __( 'At the start', 'msrp-for-woocommerce' ),
 					'end'   => __( 'At the end', 'msrp-for-woocommerce' ),
 				),
+			),
+			array(
+				'title'    => __( 'MSRP backend field label', 'msrp-for-woocommerce' ),
+				'desc'     => __( 'MSRP backend field label', 'msrp-for-woocommerce' ),
+				'type'     => 'text',
+				'id'       => 'alg_wc_msrp_admin_field_label',
+				'default'  => '',
 			),
 			array(
 				'type'     => 'sectionend',

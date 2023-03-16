@@ -82,6 +82,21 @@ class Alg_WC_MSRP_Settings_Section {
 					'instead_of_price' => __( 'Instead of the standard price', 'msrp-for-woocommerce' ),
 				),
 			),
+			
+			array(
+				'title'    => __( 'Text Format', 'msrp-for-woocommerce' ),
+				'type'     => 'select',
+				'id'       => 'alg_wc_msrp_display_on_' . $section_id . '_text_format',
+				'default'  => 'del',
+				'options'  => array(
+					''     => __( 'No Format', 'msrp-for-woocommerce' ),
+					'b'     => __( 'Bold', 'msrp-for-woocommerce' ),
+					'i'      => __( 'Italic', 'msrp-for-woocommerce' ),
+					'del' => __( 'Strike-through', 'msrp-for-woocommerce' ),
+					'u' => __( 'Underlined', 'msrp-for-woocommerce' ),
+				),
+			),
+			
 			array(
 				'title'    => __( 'Savings', 'msrp-for-woocommerce' ),
 				'desc'     => sprintf( __( 'Savings amount. To display this, use %s in "Final Template"', 'msrp-for-woocommerce' ), '<code>' . '%you_save%' . '</code>' ) . ' ' .
@@ -115,6 +130,18 @@ class Alg_WC_MSRP_Settings_Section {
 				'type'     => 'textarea',
 				'id'       => 'alg_wc_msrp_display_on_' . $section_id . '_template',
 				'default'  => '<div class="price"><label for="alg_wc_msrp">MSRP</label>: <span id="alg_wc_msrp"><del>%msrp%</del>%you_save%</span></div>',
+				'css'      => 'width:100%;',
+				'alg_wc_msrp_raw' => true,
+				'custom_attributes' => apply_filters( 'alg_wc_msrp_settings', array( 'readonly' => 'readonly' ) ),
+			),
+			array(
+				'title'    => __( 'Template if no MSRP is defined', 'msrp-for-woocommerce' ),
+				'desc'     => sprintf( __( 'You can also use shortcodes here, e.g.: %s.', 'msrp-for-woocommerce' ), '<code>[alg_wc_msrp_wpml lang="en"][/alg_wc_msrp_wpml]</code>' ) .
+					apply_filters( 'alg_wc_msrp_settings', sprintf( '<br>' . 'You will need %s plugin to change the template.',
+						'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' . 'MSRP for WooCommerce Pro' . '</a>' ) ),
+				'type'     => 'textarea',
+				'id'       => 'alg_wc_msrp_display_on_' . $section_id . '_template_msrp_no_defined',
+				'default'  => '',
 				'css'      => 'width:100%;',
 				'alg_wc_msrp_raw' => true,
 				'custom_attributes' => apply_filters( 'alg_wc_msrp_settings', array( 'readonly' => 'readonly' ) ),

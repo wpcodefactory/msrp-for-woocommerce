@@ -14,6 +14,14 @@ if ( ! class_exists( 'Alg_WC_MSRP_Core' ) ) :
 class Alg_WC_MSRP_Core {
 
 	/**
+	 * Admin MSRP Label.
+	 *
+	 * @var   array
+	 * @since 1.0.0
+	 */
+	public $alg_wc_msrp_admin_field_label = '';
+	
+	/**
 	 * Constructor.
 	 *
 	 * @version 1.3.6
@@ -29,8 +37,16 @@ class Alg_WC_MSRP_Core {
 	 * @todo    [feature] composite products
 	 * @todo    [feature] MSRP per user role (i.e. same as per country / currency)
 	 */
+	
+	
 	function __construct() {
 		if ( 'yes' === get_option( 'alg_wc_msrp_plugin_enabled', 'yes' ) ) {
+			
+			$this->alg_wc_msrp_admin_field_label = get_option( 'alg_wc_msrp_admin_field_label', 'MSRP' );
+			if(empty($this->alg_wc_msrp_admin_field_label)){
+				$this->alg_wc_msrp_admin_field_label = 'MSRP';
+			}
+			
 			// Init options
 			$this->init_options();
 			// Core
@@ -81,6 +97,8 @@ class Alg_WC_MSRP_Core {
 			if ( 'in_transients' === $this->options['variable_optimization'] ) {
 				add_action( 'woocommerce_delete_product_transients', array( $this, 'delete_product_transient_variable' ), PHP_INT_MAX );
 			}
+			
+			
 		}
 	}
 
@@ -119,9 +137,16 @@ class Alg_WC_MSRP_Core {
 		$sections = array( 'single', 'archives', 'cart' );
 		foreach ( $sections as $section_id ) {
 			$option_id = 'alg_wc_msrp_display_on_' . $section_id;
+			$textFormat = get_option( $option_id . '_text_format', 'del' );
+			if($textFormat === ''){
+				$template = '<div class="price"><label for="alg_wc_msrp">MSRP</label>: <span id="alg_wc_msrp">%msrp%%you_save%</span></div>';
+			}else{
+				$template = '<div class="price"><label for="alg_wc_msrp">MSRP</label>: <span id="alg_wc_msrp"><' . $textFormat . '>%msrp%</' . $textFormat . '>%you_save%</span></div>';
+			}
 			$this->options['msrp_display'][ $section_id ]['display']          = get_option( $option_id, 'show' );
 			$this->options['msrp_display'][ $section_id ]['position']         = get_option( $option_id . '_position', 'after_price' );
 			$this->options['msrp_display'][ $section_id ]['template']         = apply_filters( 'alg_wc_msrp_template', $template, $section_id );
+			$this->options['msrp_display'][ $section_id ]['template_msrp_no_defined']  = apply_filters( 'alg_wc_msrp_template_msrp_no_defined', '', $section_id );
 			$this->options['msrp_display'][ $section_id ]['you_save']         = get_option( $option_id . '_you_save',         ' (%you_save_raw%)' );
 			$this->options['msrp_display'][ $section_id ]['you_save_percent'] = get_option( $option_id . '_you_save_percent', ' (%you_save_percent_raw% %)' );
 			$this->options['msrp_display'][ $section_id ]['you_save_round']   = get_option( $option_id . '_you_save_percent_round', 0 );
@@ -364,7 +389,7 @@ class Alg_WC_MSRP_Core {
 			'id'            => "variable_alg_msrp_{$loop}",
 			'name'          => "variable_alg_msrp[{$loop}]",
 			'value'         => wc_format_localized_price( isset( $variation_data['_alg_msrp'][0] ) ? $variation_data['_alg_msrp'][0] : '' ),
-			'label'         => __( 'MSRP', 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol() . ')',
+			'label'         => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol() . ')',
 			'data_type'     => 'price',
 			'wrapper_class' => 'form-row form-row-full',
 		) );
@@ -378,7 +403,7 @@ class Alg_WC_MSRP_Core {
 					'id'            => "variable_alg_msrp_by_country_{$loop}_{$country_code}",
 					'name'          => "variable_alg_msrp_by_country[{$loop}][{$country_code}]",
 					'value'         => wc_format_localized_price( $value ),
-					'label'         => __( 'MSRP', 'msrp-for-woocommerce' ) . ' [' . $country_code . '] (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
+					'label'         => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' [' . $country_code . '] (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
 					'data_type'     => 'price',
 					'wrapper_class' => 'form-row form-row-full',
 				) );
@@ -393,7 +418,7 @@ class Alg_WC_MSRP_Core {
 					'id'            => "variable_alg_msrp_by_currency_{$loop}_{$currency}",
 					'name'          => "variable_alg_msrp_by_currency[{$loop}][{$currency}]",
 					'value'         => wc_format_localized_price( $value ),
-					'label'         => __( 'MSRP', 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
+					'label'         => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
 					'data_type'     => 'price',
 					'wrapper_class' => 'form-row form-row-full',
 				) );
@@ -446,7 +471,7 @@ class Alg_WC_MSRP_Core {
 			'id'          => '_alg_msrp',
 			'value'       => get_post_meta( $product_id, '_' . 'alg_msrp', true ),
 			'data_type'   => 'price',
-			'label'       => __( 'MSRP', 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol() . ')',
+			'label'       => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol() . ')',
 		) );
 		if ( ! empty( $this->options['msrp_countries'] ) ) {
 			$values = get_post_meta( $product_id, '_alg_msrp_by_country', true );
@@ -458,7 +483,7 @@ class Alg_WC_MSRP_Core {
 					'name'        => '_alg_msrp_by_country[' . $country_code . ']',
 					'value'       => $value,
 					'data_type'   => 'price',
-					'label'       => __( 'MSRP', 'msrp-for-woocommerce' ) . ' [' . $country_code . '] (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
+					'label'       => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' [' . $country_code . '] (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
 				) );
 			}
 		}
@@ -471,7 +496,7 @@ class Alg_WC_MSRP_Core {
 					'name'        => '_alg_msrp_by_currency[' . $currency . ']',
 					'value'       => $value,
 					'data_type'   => 'price',
-					'label'       => __( 'MSRP', 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
+					'label'       => __( $this->alg_wc_msrp_admin_field_label, 'msrp-for-woocommerce' ) . ' (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')',
 				) );
 			}
 		}
@@ -596,7 +621,8 @@ class Alg_WC_MSRP_Core {
 			$country_code     = $this->get_visitors_country_by_ip();
 			if ( isset( $msrp_by_country[ $country_code ] ) ) {
 				$currency   = ( isset( $this->options['msrp_countries_currencies'][ $country_code ] ) ? $this->options['msrp_countries_currencies'][ $country_code ] : '' );
-				$msrp       = apply_filters( 'alg_wc_msrp_by_country', $msrp_by_country[ $country_code ], $product_id, $country_code, $currency );
+				/*$msrp       = apply_filters( 'alg_wc_msrp_by_country', $msrp_by_country[ $country_code ], $product_id, $country_code, $currency );*/
+				$msrp       = $msrp_by_country[ $country_code ];
 			}
 		}
 		if ( ( '' == $msrp || 0 == $msrp ) && ! empty( $this->options['msrp_currencies'] ) ) {
@@ -816,9 +842,12 @@ class Alg_WC_MSRP_Core {
 			$min = current( $data );
 			$max = end( $data );
 			if ( $min['msrp'] !== $max['msrp'] ) {
+				$max['msrp'] = wc_get_price_to_display($product, array('qty' => 1, 'price' => $max['msrp'] ) );
+				$min['msrp'] = wc_get_price_to_display($product, array('qty' => 1, 'price' => $min['msrp'] ) );
 				$html = ( 'you_save_percent' === $type ?
 					$this->format_range( $min['msrp'], $max['msrp'] ) : $this->wc_format_price_range( $min['msrp'], $max['msrp'], $min['currency'], $max['currency'] ) );
 			} else {
+				$min['msrp'] = wc_get_price_to_display($product, array('qty' => 1, 'price' => $min['msrp'] ) );
 				$html = ( 'you_save_percent' === $type ?
 					$min['msrp'] : wc_price( $min['msrp'], $min['currency'] ) );
 			}
@@ -838,8 +867,10 @@ class Alg_WC_MSRP_Core {
 	function compare_variable_prices_and_msrp( $product, $cmp ) {
 		foreach ( $this->get_available_variations_ids( $product ) as $variation_id ) {
 			$msrp              = $this->get_msrp( $variation_id );
+			
 			$variation_product = wc_get_product( $variation_id );
 			$variation_price   = $variation_product->get_price();
+			
 			switch ( $cmp ) {
 				case 'is_equal':
 					if ( $variation_price != $msrp['msrp'] ) {
@@ -880,6 +911,7 @@ class Alg_WC_MSRP_Core {
 	 * @todo    [dev] (maybe) add `%regular_price%` and `%sale_price%` placeholders
 	 */
 	function display( $price_html, $product, $section_id = false ) {
+		
 		if ( '' === $price_html && $this->options['do_hide_msrp_for_empty_price'] ) {
 			return $price_html;
 		}
@@ -895,11 +927,13 @@ class Alg_WC_MSRP_Core {
 			if ( '' == $msrp_variable_html ) {
 				return $price_html;
 			}
+
 			if (
 				( 'show_if_diff'   == $display && $this->compare_variable_prices_and_msrp( $product, 'is_equal' ) ) ||
-				( 'show_if_higher' == $display && $this->compare_variable_prices_and_msrp( $product, 'is_lower_or_equal' ) ) ) {
+				( 'show_if_higher' == $display && ! $this->compare_variable_prices_and_msrp( $product, 'is_lower_or_equal' ) ) ) {
 				return $price_html;
 			}
+
 			$you_save_variable_html         = $this->get_variable_msrp( $product, 'you_save' );
 			$you_save_percent_variable_html = $this->get_variable_msrp( $product, 'you_save_percent', $this->options['msrp_display'][ $section_id ]['you_save_round'] );
 			$replaced_values = array(
@@ -916,11 +950,28 @@ class Alg_WC_MSRP_Core {
 			$product_id = $this->get_product_id( $product );
 			$msrp_data  = $this->get_msrp( $product_id );
 			$msrp       = $msrp_data['msrp'];
+			
+			// price including tax
+			if(!empty($msrp)){
+				$msrp = wc_get_price_to_display($product, array('qty' => 1, 'price' => $msrp ) );
+			}
+			
 			$currency   = $msrp_data['currency'];
 			if ( '' == $msrp || 0 == $msrp ) {
-				return $price_html;
+				// for empty msrp
+				$msrp_html = do_shortcode( $this->options['msrp_display'][ $section_id ]['template_msrp_no_defined'] );
+				switch ( $this->options['msrp_display'][ $section_id ]['position'] ) {
+					case 'before_price':
+						return $msrp_html . $price_html;
+					case 'after_price':
+						return $price_html . $msrp_html;
+					case 'instead_of_price':
+						return $msrp_html;
+				}
+				// return $price_html;
 			}
 			$price = $product->get_price();
+			$price = wc_get_price_to_display($product, array('qty' => 1, 'price' => $price ) );
 			if ( ! is_numeric( $price ) ) {
 				$price = 0;
 			}
@@ -929,7 +980,8 @@ class Alg_WC_MSRP_Core {
 			}
 			$diff = $msrp - $price;
 			$replaced_values = array(
-				'%price%'            => wc_price( $product->get_price() ),
+				/*'%price%'            => wc_price( $product->get_price() ),*/
+				'%price%'            => wc_price( $price ),
 				'%msrp%'             => wc_price( $msrp, array( 'currency' => $currency ) ),
 				'%you_save%'         => str_replace( '%you_save_raw%',
 					wc_price( $diff, array( 'currency' => $currency ) ),
@@ -940,6 +992,7 @@ class Alg_WC_MSRP_Core {
 			);
 		}
 		$msrp_html = str_replace( array_keys( $replaced_values ), $replaced_values, do_shortcode( $this->options['msrp_display'][ $section_id ]['template'] ) );
+		
 		switch ( $this->options['msrp_display'][ $section_id ]['position'] ) {
 			case 'before_price':
 				return $msrp_html . $price_html;

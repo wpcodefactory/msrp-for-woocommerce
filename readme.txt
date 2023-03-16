@@ -1,25 +1,21 @@
-=== MSRP for WooCommerce ===
+=== MSRP (List Price/RRP) for WooCommerce ===
 Contributors: omardabbas
-Tags: woocommerce, product, msrp, list price, rrp, srp, woo commerce
+Tags: woocommerce, product, msrp, list price, rrp, srp
 Requires at least: 4.4
-Tested up to: 5.3
-Stable tag: 1.4.0
+Tested up to: 6.1
+Stable tag: 1.7.5
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Save and display product MSRP in WooCommerce.
+Save and display product MSRP (RRP / SRP / List Price) for all products in WooCommerce to encourage users to purchase with your competitive prices
 
 == Description ==
 
-**MSRP for WooCommerce** plugin lets you save and display product MSRP (manufacturer's suggested retail price) in WooCommerce.
+**MSRP for WooCommerce** plugin lets you create and display product MSRP (manufacturer's suggested retail price) in WooCommerce.
 
-You can set **display options** separately for *single product*, *archives* and *cart* pages:
+With this MSRP plugin, you will be able to define different MSRPs for products, decide when to show or hide these prices (based on conditions), you can also customize the name, style, and text of the price.
 
-* Display: Do not show (i.e. visible to admin only); Show; Only show if MSRP is higher than the standard price; Only show if MSRP differs from the standard price.
-* Position: Before the standard price; After the standard price; Instead of the standard price.
-* Savings amount (and percent) templates.
-
-Additional options include:
+Plugin main features:
 
 * Hide MSRP for products with empty price.
 * Hide regular price for products on sale.
@@ -29,13 +25,26 @@ Additional options include:
 * Add MSRP field to admin quick edit.
 * Add MSRP field to admin bulk edit.
 
-[MSRP for WooCommerce Pro](https://wpfactory.com/item/msrp-for-woocommerce/) plugin version also has options to:
+You can set **display options** separately for *single product*, *archives* and *cart* pages:
+
+* Display: Do not show (i.e. visible to admin only); Show; Only show if MSRP is higher than the standard price; Only show if MSRP differs from the standard price.
+* Position: Before the standard price; After the standard price; Instead of the standard price.
+* Savings amount (and percent) templates.
+
+If you want to to further customize the plugin to meet your needs, you may need to give [MSRP for WooCommerce Pro](https://wpfactory.com/item/msrp-for-woocommerce/) a try, our premium plugin version has options to:
 
 * Set **MSRP by country** (country will be detected automatically by visitor's IP address).
 * Set **MSRP by currency** (for currency switcher plugins).
 * **Customize** final template.
 * Display **total savings in cart**.
 * Show MSRP on frontend for selected **user roles** only.
+
+= Demo Store =
+
+If you want to try the plugin features, play around with its settings before installing it on your live website, feel free to do so on this demo store:
+URL: https://wpwhale.com/demo/wp-admin/
+User: demo
+Password: G6_32e!r@
 
 = Feedback =
 
@@ -49,6 +58,76 @@ Additional options include:
 3. Start by visiting plugin settings at "WooCommerce > Settings > MSRP".
 
 == Changelog ==
+
+= 1.7.5 - 06/02/2023 =
+* Verified compatibility with WooCommerce 7.3
+
+= 1.7.4 - 04/11/2022 =
+* Verified compatibility with WordPress 6.1 & WooCommerce 7.0
+
+= 1.7.3 - 24/08/2022 =
+* Fixed a bug showing MSRP on variations without MSRP
+* Verified compatibility with WooCommerce 6.8
+
+= 1.7.2 - 12/06/2022 =
+* Verified compatibility with WordPress 6.0 & WooCommerce 6.5
+
+= 1.7.1 - 19/03/2022 =
+* Verified compatibility with WooCommerce 6.3
+
+= 1.7 - 28/01/2022 =
+* Verified compatibility with WordPress 5.9 & WooCommerce 6.1
+* New Feature: You can bulk edit MSRP prices for all your products at once (or by category)
+
+= 1.6.4 - 26/08/2021 =
+* Verified compatibility with WooCommerce 5.9
+
+= 1.6.3 - 26/08/2021 =
+* Checked & verified compatibility with Woo 5.6
+
+= 1.6.2 - 25/07/2021 =
+* Verified compatibilty with WC 5.5 & WP 5.8
+
+= 1.6.1 - 17/05/2021 =
+* Verified compatibility with WooCommerce 5.3
+
+= 1.6 - 03/05/2021 =
+* Added a new template for products without MSRP defined
+* Allowed changing the field label (product backend) that defines the MSRP price
+
+= 1.5.6 - 20/04/2021 =
+* Tested compatibilty with WC 5.2 & WP 5.7
+
+= 1.5.5 - 28/02/2021 =
+* Tested compatibilty with WC 5.0
+
+= 1.5.4 - 07/02/2021 =
+* Enhanced %price% tag to work with tax-included prices
+
+= 1.5.3 - 27/01/2021 =
+* Tested compatibility with WC 4.9 & WP 5.6
+
+= 1.5.2 - 21/11/2020 =
+* Tested compatibility with WC 4.7
+
+= 1.5.1 - 24/08/2020 =
+* Added a new dropdown menu that allows choosing MSRP text format: Bold / Italic / Underlined / Strike-through
+* Fixed a bug in variable MSRP pricing when selecting "Only show MSRP if higher than Regular Price"
+
+= 1.5 - 15/08/2020 =
+* Changed MSRP field to read tax as per WC settings (if prices include / exclude tax)
+* Tested compatibility with WP 5.5 & WC 4.3
+
+= 1.4.3 - 28/04/2020 =
+* Tested compatibility with WP 5.4 & WC 4.0
+
+= 1.4.2 - 15/03/2020 =
+* Fix: Geolocate pricing was not working when using multiple countries and/or currencies
+
+= 1.4.1 - 02/01/2020 =
+* Text updates over the plugin pages.
+* Copyrights Update
+* Added a section to review the plugin
 
 = 1.4.0 - 23/12/2019 =
 * Dev - Plugin author updated.

@@ -1,0 +1,504 @@
+#: includes/class-alg-wc-msrp-core.php:140
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:246
+msgid "From %from%"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-core.php:241
+#: includes/class-alg-wc-msrp-core.php:298
+#: includes/class-alg-wc-msrp-core.php:367
+#: includes/class-alg-wc-msrp-core.php:381
+#: includes/class-alg-wc-msrp-core.php:396
+#: includes/class-alg-wc-msrp-core.php:449
+#: includes/class-alg-wc-msrp-core.php:461
+#: includes/class-alg-wc-msrp-core.php:474
+#: includes/settings/class-alg-wc-settings-msrp.php:24
+msgid "MSRP"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-core.php:243
+msgid "- No change -"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-core.php:638
+#, php-format
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:25
+msgid "Admin & Advanced"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:59
+#, php-format
+msgid "%d product(s) modified."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:74
+msgid "Nonce not verified."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:78
+msgid "Wrong user role."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:114
+msgid "Guest"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:128
+msgid "Copy all products prices to MSRP"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:129
+msgid "Delete all products MSRP meta"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:134
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:149
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:154
+msgid "Tools"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:167
+msgid "Admin Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:172
+msgid "Admin products list"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:173
+msgid "Adds MSRP column to admin products list."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:174
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:182
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:190
+msgid "Add"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:180
+msgid "Admin quick edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:181
+msgid "Adds MSRP field to admin quick edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:188
+msgid "Admin bulk edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:189
+msgid "Adds MSRP field to admin bulk edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:196
+msgid "Position in admin quick and bulk edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:197
+msgid "MSRP field position in admin quick and bulk edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:202
+msgid "At the start"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:203
+msgid "At the end"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:214
+msgid "Advanced Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:219
+msgid "Products with empty price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:220
+msgid "Hides MSRP for products with empty price."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:221
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:229
+msgid "Hide"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:227
+msgid "Products on sale"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:228
+msgid "Hides regular price for products on sale and with MSRP."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:235
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:244
+msgid "Custom range format"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:236
+msgid ""
+"Enables custom range format for <strong>variable</strong> products when "
+"displaying MSRP data."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:237
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:254
+msgid "Enable"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:252
+msgid "Apply price filter"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:253
+msgid ""
+"Enable this if you want to apply standard WooCommerce price filter to MSRP "
+"(e.g. if you are using some currency switcher plugin with price calculation "
+"by exchange rates)."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:260
+msgid "Required user role(s)"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:261
+msgid "Only show MSRP to selected user roles."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:262
+msgid "Leave blank to show to all user roles."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:273
+msgid "Variable MSRP optimization"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:279
+msgid "None"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:280
+msgid "Save in transients"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:281
+msgid "Save in array"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:24
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:37
+msgid "Cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:41
+msgid "Cart Total Savings Display Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:42
+msgid "Display total savings in cart."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:47
+msgid "Cart total savings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:48
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:47
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:97
+msgid "Enable section"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:57
+msgid "Position(s)"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:63
+msgid "Before cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:64
+msgid "Before cart table"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:65
+msgid "Before cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:66
+msgid "Cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:67
+msgid "Cart coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:68
+msgid "Cart actions"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:69
+msgid "After cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:70
+msgid "After cart table"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:71
+msgid "Cart collaterals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:72
+msgid "After cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:74
+msgid "Before cart totals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:75
+msgid "Cart totals: Before shipping"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:76
+msgid "Cart totals: After shipping"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:77
+msgid "Cart totals: Before order total"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:78
+msgid "Cart totals: After order total"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:79
+msgid "Proceed to checkout"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:80
+msgid "After cart totals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:82
+msgid "Before shipping calculator"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:83
+msgid "After shipping calculator"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:87
+msgid "Template"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:89
+#: includes/settings/class-alg-wc-msrp-settings-section.php:112
+#, php-format
+msgid "You can also use shortcodes here, e.g.: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:24
+msgid "Countries & Currencies"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:39
+msgid "Countries Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:40
+msgid ""
+"Fill in this optional section, if you want to save different MSRP values for "
+"different countries."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:41
+msgid "Country will be detected automatically by visitor's IP address."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:46
+msgid "MSRP by country"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:56
+msgid "Countries"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:57
+msgid "Save changes to see new options."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:89
+msgid "Currencies Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:90
+msgid ""
+"Fill in this optional section, if you want to save different MSRP values for "
+"different currencies."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:91
+msgid "Currency can be switched with some external currency switcher plugin."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:96
+msgid "MSRP by currency"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:106
+msgid "Currencies"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:107
+msgid "Selected currencies will appear on each product's edit page."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:24
+msgid "General"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:38
+msgid "MSRP Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:41
+msgid ""
+"The <strong>manufacturer's suggested retail price</strong> (<strong>MSRP</"
+"strong>), also known as the <strong>list price</strong>, or the "
+"<strong>recommended retail price</strong> (<strong>RRP</strong>), or the "
+"<strong>suggested retail price</strong> (<strong>SRP</strong>), of a product "
+"is the price at which the manufacturer recommends that the retailer sell the "
+"product."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:42
+#, php-format
+msgid "Plugin stores MSRP as product meta with %s key."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:45
+msgid "MSRP for WooCommerce"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:46
+msgid "Enable plugin"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:47
+msgid "Save and display product MSRP in WooCommerce."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:58
+msgid "Single Product Page"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:60
+msgid "Archives"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:45
+#, php-format
+msgid "Replaced value: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:45
+#, php-format
+msgid "Replaced values: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:58
+#, php-format
+msgid "%s Display Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:63
+msgid "Display"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:68
+msgid "Do not show"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:69
+msgid "Show"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:70
+msgid "Only show if MSRP is higher than the standard price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:71
+msgid "Only show if MSRP differs from the standard price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:75
+msgid "Position"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:80
+msgid "Before the standard price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:81
+msgid "After the standard price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:82
+msgid "Instead of the standard price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:86
+msgid "Savings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:87
+#, php-format
+msgid "Savings amount. To display this, use %s in \"Final Template\""
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:95
+#, php-format
+msgid ""
+"Savings amount in percent. To display this, use %s in \"Final Template\""
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:103
+msgid "Savings amount in percent - rounding precision"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-section.php:110
+msgid "Final Template"
+msgstr ""
+
+#: includes/settings/class-alg-wc-settings-msrp.php:49
+msgid "Reset Settings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-settings-msrp.php:54
+msgid "Reset section settings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-settings-msrp.php:55
+msgid "Reset"
+msgstr ""
+
+#: includes/settings/class-alg-wc-settings-msrp.php:94
+msgid "Your settings have been reset."
+msgstr ""
+
+#: msrp-for-woocommerce.php:156
+msgid "Settings"
+msgstr ""
+
+#: msrp-for-woocommerce.php:159
+msgid "Unlock All"
+msgstr ""

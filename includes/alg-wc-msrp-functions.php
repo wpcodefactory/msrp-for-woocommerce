@@ -4,7 +4,7 @@
  *
  * @version 1.3.4
  * @since   1.3.4
- * @author  WPWhale
+ * @author  WPFactory
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

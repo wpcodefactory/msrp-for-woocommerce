@@ -42,7 +42,7 @@ If you want to to further customize the plugin to meet your needs, you may need 
 = Demo Store =
 
 If you want to try the plugin features, play around with its settings before installing it on your live website, feel free to do so on this demo store:
-URL: https://wpwhale.com/demo/wp-admin/
+URL: https://wPFactory.com/demo/wp-admin/
 User: demo
 Password: G6_32e!r@
 
@@ -58,6 +58,9 @@ Password: G6_32e!r@
 3. Start by visiting plugin settings at "WooCommerce > Settings > MSRP".
 
 == Changelog ==
+
+= 1.7.6 - 30/03/2023 =
+* Move to WPFactory.
 
 = 1.7.5 - 06/02/2023 =
 * Verified compatibility with WooCommerce 7.3

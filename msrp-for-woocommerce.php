@@ -3,7 +3,7 @@
 Plugin Name: MSRP for WooCommerce
 Plugin URI: https://wpfactory.com/item/msrp-for-woocommerce/
 Description: Save and display product MSRP in WooCommerce.
-Version: 1.7.6-dev
+Version: 1.7.6
 Author: WPFactory
 Author URI: https://wpfactory.com/
 Text Domain: msrp-for-woocommerce
@@ -33,7 +33,7 @@ final class Alg_WC_MSRP {
 	 * @var   string
 	 * @since 1.0.0
 	 */
-	public $version = '1.7.6-dev-20230330-1451';
+	public $version = '1.7.6';
 
 	/**
 	 * @var   Alg_WC_MSRP The single instance of the class

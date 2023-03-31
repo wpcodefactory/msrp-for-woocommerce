@@ -3,7 +3,7 @@ Contributors: omardabbas
 Tags: woocommerce, product, msrp, list price, rrp, srp
 Requires at least: 4.4
 Tested up to: 6.1
-Stable tag: 1.7.5
+Stable tag: 1.7.6
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,7 +42,7 @@ If you want to to further customize the plugin to meet your needs, you may need 
 = Demo Store =
 
 If you want to try the plugin features, play around with its settings before installing it on your live website, feel free to do so on this demo store:
-URL: https://wPFactory.com/demo/wp-admin/
+URL: https://wpwhale.com/demo/wp-admin/
 User: demo
 Password: G6_32e!r@
 
@@ -59,7 +59,7 @@ Password: G6_32e!r@
 
 == Changelog ==
 
-= 1.7.6 - 30/03/2023 =
+= 1.7.6 - 31/03/2023 =
 * Move to WPFactory.
 
 = 1.7.5 - 06/02/2023 =

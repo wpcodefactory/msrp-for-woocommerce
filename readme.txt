@@ -59,6 +59,7 @@ Password: G6_32e!r@
 
 == Changelog ==
 
+
 = 1.7.7 - 17/06/2023 =
 * WC tested up to: 7.8.
 * Tested up to: 6.2.

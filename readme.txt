@@ -1,9 +1,9 @@
 === MSRP (List Price/RRP) for WooCommerce ===
-Contributors: omardabbas, kousikmukherjeeli
+Contributors: wpcodefactory, omardabbas, karzin, anbinder, algoritmika, kousikmukherjeeli
 Tags: woocommerce, product, msrp, list price, rrp, srp
 Requires at least: 4.4
 Tested up to: 6.2
-Stable tag: 1.7.7
+Stable tag: 1.7.8
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -59,6 +59,10 @@ Password: G6_32e!r@
 
 == Changelog ==
 
+
+= 1.7.8 - 09/08/2023 =
+* WC tested up to: 7.9.
+* Compatibility with HPOS
 
 = 1.7.7 - 17/06/2023 =
 * WC tested up to: 7.8.

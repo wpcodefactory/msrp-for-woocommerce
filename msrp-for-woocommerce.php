@@ -3,13 +3,13 @@
 Plugin Name: MSRP for WooCommerce
 Plugin URI: https://wpfactory.com/item/msrp-for-woocommerce/
 Description: Save and display product MSRP in WooCommerce.
-Version: 1.7.9
+Version: 1.7.10
 Author: WPFactory
 Author URI: https://wpfactory.com/
 Text Domain: msrp-for-woocommerce
 Domain Path: /langs
 Copyright: © 2023 WPFactory
-WC tested up to: 8.1
+WC tested up to: 8.8
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -22,7 +22,7 @@ if ( ! class_exists( 'Alg_WC_MSRP' ) ) :
  * Main Alg_WC_MSRP Class
  *
  * @class   Alg_WC_MSRP
- * @version 1.3.9
+ * @version 1.7.10
  * @since   1.0.0
  */
 final class Alg_WC_MSRP {
@@ -33,7 +33,7 @@ final class Alg_WC_MSRP {
 	 * @var   string
 	 * @since 1.0.0
 	 */
-	public $version = '1.7.9';
+	public $version = '1.7.10';
 
 	/**
 	 * @var   Alg_WC_MSRP The single instance of the class
@@ -231,3 +231,4 @@ add_action( 'before_woocommerce_init', function() {
 		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', dirname(__FILE__), true );
 	}
 } );
+

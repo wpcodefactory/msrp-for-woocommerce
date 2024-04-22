@@ -1,688 +1,669 @@
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:40
-msgid "Wrong user role or nonce did not verify."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:194
-msgid "Prices updated successfully!"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:197
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:350
-msgid "No products."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:211
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:242
-msgid "MSRP Bulk Price Converter Tool"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:212
-msgid "MSRP Bulk Price Converter"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:241
-msgid "MSRP Admin & Advanced settings"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:245
-msgid "General Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:248
-msgid "<strong>Multiply</strong> all product prices by"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:253
-msgid "<strong>Add</strong> to all product prices"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:258
-msgid "Base Price"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:261
-msgid "Regular prices only"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:263
-msgid "Sale prices only"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:269
-msgid "Products"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:270
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:289
-#, php-format
-msgid "You will need %s plugin to change values in this section."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:274
-msgid "Products <strong>category</strong>"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:280
-msgid "Products <strong>tag</strong>"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:288
-msgid "Final Price Correction"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:293
-msgid "<strong>Rounding function</strong>"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:296
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:396
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:289
-msgid "None"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:298
-msgid "Round"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:300
-msgid "Floor"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:302
-msgid "Ceil"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:306
-msgid "Rounding <strong>coefficient</strong>"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:307
-msgid "Ignored if \"Rounding function\" is set to \"None\"."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:312
-msgid "<strong>\"Pretty prices\"</strong> threshold"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:313
-msgid "Ignored if set to zero."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:323
-msgid "Preview prices"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:326
-msgid "Change prices"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:327
-msgid "There is no undo for this action."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:328
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:134
-msgid "Are you sure?"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:329
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-settings-msrp.php:55
-msgid "Reset"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:335
-msgid "Results"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:339
-msgid "Product"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:340
-msgid "Categories"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:341
-msgid "Tags"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:342
-msgid "Price Type"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:343
-msgid "Original Price"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:344
-msgid "Modified Price"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-bulk-price-converter-tool.php:387
-msgid "Any"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-core.php:165
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:256
-msgid "From %from%"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-core.php:266
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-core.php:323
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-settings-msrp.php:24
-msgid "MSRP"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-core.php:268
-msgid "- No change -"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\class-alg-wc-msrp-core.php:664
-#, php-format
-msgctxt "Price range: from-to"
-msgid "%1$s &ndash; %2$s"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:25
-msgid "Admin & Advanced"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:59
-#, php-format
-msgid "%d product(s) modified."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:74
-msgid "Nonce not verified."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:78
-msgid "Wrong user role."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:114
-msgid "Guest"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:128
-msgid "Copy all products prices to MSRP"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:129
-msgid "Delete all products MSRP meta"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:138
-msgid "Bulk MSRP price converter tool"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:152
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:157
-msgid "Tools"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:170
-msgid "Admin Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:175
-msgid "Admin products list"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:176
-msgid "Adds MSRP column to admin products list."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:177
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:185
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:193
-msgid "Add"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:183
-msgid "Admin quick edit"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:184
-msgid "Adds MSRP field to admin quick edit."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:191
-msgid "Admin bulk edit"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:192
-msgid "Adds MSRP field to admin bulk edit."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:199
-msgid "Position in admin quick and bulk edit"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:200
-msgid "MSRP field position in admin quick and bulk edit."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:205
-msgid "At the start"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:206
-msgid "At the end"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:210
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:211
-msgid "MSRP backend field label"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:224
-msgid "Advanced Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:229
-msgid "Products with empty price"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:230
-msgid "Hides MSRP for products with empty price."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:231
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:239
-msgid "Hide"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:237
-msgid "Products on sale"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:238
-msgid "Hides regular price for products on sale and with MSRP."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:245
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:254
-msgid "Custom range format"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:246
+# Copyright (C) 2024 WPFactory
+# This file is distributed under the GNU General Public License v3.0.
 msgid ""
-"Enables custom range format for <strong>variable</strong> products when "
-"displaying MSRP data."
+msgstr ""
+"Project-Id-Version: msrp-for-woocommerce 1.7.10\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/msrp-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-04-22T09:39:29+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: msrp-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "MSRP for WooCommerce Pro"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:247
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:264
-msgid "Enable"
+#. Plugin URI of the plugin
+msgid "https://wpfactory.com/item/msrp-for-woocommerce/"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:262
-msgid "Apply price filter"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:263
-msgid ""
-"Enable this if you want to apply standard WooCommerce price filter to MSRP "
-"(e.g. if you are using some currency switcher plugin with price calculation "
-"by exchange rates)."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:270
-msgid "Required user role(s)"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:271
-msgid "Only show MSRP to selected user roles."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:272
-msgid "Leave blank to show to all user roles."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:283
-msgid "Variable MSRP optimization"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:290
-msgid "Save in transients"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-admin-advanced.php:291
-msgid "Save in array"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:24
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:37
-msgid "Cart"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:41
-msgid "Cart Total Savings Display Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:42
-msgid "Display total savings in cart."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:47
-msgid "Cart total savings"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:48
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:47
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:97
-msgid "Enable section"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:57
-msgid "Position(s)"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:63
-msgid "Before cart"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:64
-msgid "Before cart table"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:65
-msgid "Before cart contents"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:66
-msgid "Cart contents"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:67
-msgid "Cart coupon"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:68
-msgid "Cart actions"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:69
-msgid "After cart contents"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:70
-msgid "After cart table"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:71
-msgid "Cart collaterals"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:72
-msgid "After cart"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:74
-msgid "Before cart totals"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:75
-msgid "Cart totals: Before shipping"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:76
-msgid "Cart totals: After shipping"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:77
-msgid "Cart totals: Before order total"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:78
-msgid "Cart totals: After order total"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:79
-msgid "Proceed to checkout"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:80
-msgid "After cart totals"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:82
-msgid "Before shipping calculator"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:83
-msgid "After shipping calculator"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:87
-msgid "Template"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-cart.php:89
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:127
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:139
-#, php-format
-msgid "You can also use shortcodes here, e.g.: %s."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:24
-msgid "Countries & Currencies"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:39
-msgid "Countries Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:40
-msgid ""
-"Fill in this optional section, if you want to save different MSRP values for "
-"different countries."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:41
-msgid "Country will be detected automatically by visitor's IP address."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:46
-msgid "MSRP by country"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:56
-msgid "Countries"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:57
-msgid "Save changes to see new options."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:89
-msgid "Currencies Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:90
-msgid ""
-"Fill in this optional section, if you want to save different MSRP values for "
-"different currencies."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:91
-msgid "Currency can be switched with some external currency switcher plugin."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:96
-msgid "MSRP by currency"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:106
-msgid "Currencies"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-countries-currencies.php:107
-msgid "Selected currencies will appear on each product's edit page."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:24
-msgid "General"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:38
-msgid "MSRP Options"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:41
-msgid ""
-"The <strong>manufacturer's suggested retail price</strong> (<strong>MSRP</"
-"strong>), also known as the <strong>list price</strong>, or the "
-"<strong>recommended retail price</strong> (<strong>RRP</strong>), or the "
-"<strong>suggested retail price</strong> (<strong>SRP</strong>), of a product "
-"is the price at which the manufacturer recommends that the retailer sell the "
-"product."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:42
-#, php-format
-msgid "Plugin stores MSRP as product meta with %s key."
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:45
-msgid "MSRP for WooCommerce"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:46
-msgid "Enable plugin"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:47
+#. Description of the plugin
+#: includes/settings/class-alg-wc-msrp-settings-general.php:47
 msgid "Save and display product MSRP in WooCommerce."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:58
+#. Author of the plugin
+msgid "WPFactory"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpfactory.com/"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:40
+msgid "Wrong user role or nonce did not verify."
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:194
+msgid "Prices updated successfully!"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:197
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:350
+msgid "No products."
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:211
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:242
+msgid "MSRP Bulk Price Converter Tool"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:212
+msgid "MSRP Bulk Price Converter"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:245
+msgid "General Options"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:248
+msgid "<strong>Multiply</strong> all product prices by"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:253
+msgid "<strong>Add</strong> to all product prices"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:258
+msgid "Base Price"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:261
+msgid "Regular prices only"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:263
+msgid "Sale prices only"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:269
+msgid "Products"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:270
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:289
+msgid "You will need %s plugin to change values in this section."
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:274
+msgid "Products <strong>category</strong>"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:280
+msgid "Products <strong>tag</strong>"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:288
+msgid "Final Price Correction"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:293
+msgid "<strong>Rounding function</strong>"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:296
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:396
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:289
+msgid "None"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:298
+msgid "Round"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:300
+msgid "Floor"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:302
+msgid "Ceil"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:306
+msgid "Rounding <strong>coefficient</strong>"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:312
+msgid "<strong>\"Pretty prices\"</strong> threshold"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:313
+msgid "Ignored if set to zero."
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:323
+msgid "Preview prices"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:326
+msgid "Change prices"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:327
+msgid "There is no undo for this action."
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:328
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:134
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:329
+#: includes/settings/class-alg-wc-settings-msrp.php:55
+msgid "Reset"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:335
+msgid "Results"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:339
+msgid "Product"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:340
+msgid "Categories"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:341
+msgid "Tags"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:342
+msgid "Price Type"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:343
+msgid "Original Price"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:344
+msgid "Modified Price"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:387
+msgid "Any"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-core.php:266
+#: includes/class-alg-wc-msrp-core.php:323
+#: includes/settings/class-alg-wc-settings-msrp.php:24
+msgid "MSRP"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-core.php:268
+msgid "- No change -"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:25
+msgid "Admin & Advanced"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:59
+msgid "%d product(s) modified."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:74
+msgid "Nonce not verified."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:78
+msgid "Wrong user role."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:114
+msgid "Guest"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:128
+msgid "Copy all products prices to MSRP"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:129
+msgid "Delete all products MSRP meta"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:152
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:157
+msgid "Tools"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:170
+msgid "Admin Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:175
+msgid "Admin products list"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:176
+msgid "Adds MSRP column to admin products list."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:177
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:185
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:193
+msgid "Add"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:183
+msgid "Admin quick edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:184
+msgid "Adds MSRP field to admin quick edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:191
+msgid "Admin bulk edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:192
+msgid "Adds MSRP field to admin bulk edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:199
+msgid "Position in admin quick and bulk edit"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:200
+msgid "MSRP field position in admin quick and bulk edit."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:205
+msgid "At the start"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:206
+msgid "At the end"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:210
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:211
+msgid "MSRP backend field label"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:224
+msgid "Advanced Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:229
+msgid "Products with empty price"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:230
+msgid "Hides MSRP for products with empty price."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:231
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:239
+msgid "Hide"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:237
+msgid "Products on sale"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:238
+msgid "Hides regular price for products on sale and with MSRP."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:245
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:254
+msgid "Custom range format"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:246
+msgid "Enables custom range format for <strong>variable</strong> products when displaying MSRP data."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:247
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:264
+msgid "Enable"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:262
+msgid "Apply price filter"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:263
+msgid "Enable this if you want to apply standard WooCommerce price filter to MSRP (e.g. if you are using some currency switcher plugin with price calculation by exchange rates)."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:270
+msgid "Required user role(s)"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:271
+msgid "Only show MSRP to selected user roles."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:272
+msgid "Leave blank to show to all user roles."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:283
+msgid "Variable MSRP optimization"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:290
+msgid "Save in transients"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:291
+msgid "Save in array"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:24
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:37
+msgid "Cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:41
+msgid "Cart Total Savings Display Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:42
+msgid "Display total savings in cart."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:47
+msgid "Cart total savings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:48
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:47
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:97
+msgid "Enable section"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:57
+msgid "Position(s)"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:63
+msgid "Before cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:64
+msgid "Before cart table"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:65
+msgid "Before cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:66
+msgid "Cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:67
+msgid "Cart coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:68
+msgid "Cart actions"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:69
+msgid "After cart contents"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:70
+msgid "After cart table"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:71
+msgid "Cart collaterals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:72
+msgid "After cart"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:74
+msgid "Before cart totals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:75
+msgid "Cart totals: Before shipping"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:76
+msgid "Cart totals: After shipping"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:77
+msgid "Cart totals: Before order total"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:78
+msgid "Cart totals: After order total"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:79
+msgid "Proceed to checkout"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:80
+msgid "After cart totals"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:82
+msgid "Before shipping calculator"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:83
+msgid "After shipping calculator"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:87
+msgid "Template"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-cart.php:89
+#: includes/settings/class-alg-wc-msrp-settings-section.php:127
+#: includes/settings/class-alg-wc-msrp-settings-section.php:139
+msgid "You can also use shortcodes here, e.g.: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:24
+msgid "Countries & Currencies"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:39
+msgid "Countries Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:40
+msgid "Fill in this optional section, if you want to save different MSRP values for different countries."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:41
+msgid "Country will be detected automatically by visitor's IP address."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:46
+msgid "MSRP by country"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:56
+msgid "Countries"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:57
+msgid "Save changes to see new options."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:89
+msgid "Currencies Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:90
+msgid "Fill in this optional section, if you want to save different MSRP values for different currencies."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:91
+msgid "Currency can be switched with some external currency switcher plugin."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:96
+msgid "MSRP by currency"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:106
+msgid "Currencies"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-countries-currencies.php:107
+msgid "Selected currencies will appear on each product's edit page."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:24
+msgid "General"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:38
+msgid "MSRP Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:41
+msgid "The <strong>manufacturer's suggested retail price</strong> (<strong>MSRP</strong>), also known as the <strong>list price</strong>, or the <strong>recommended retail price</strong> (<strong>RRP</strong>), or the <strong>suggested retail price</strong> (<strong>SRP</strong>), of a product is the price at which the manufacturer recommends that the retailer sell the product."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:42
+msgid "Plugin stores MSRP as product meta with %s key."
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:45
+msgid "MSRP for WooCommerce"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:46
+msgid "Enable plugin"
+msgstr ""
+
+#: includes/settings/class-alg-wc-msrp-settings-general.php:58
 msgid "Single Product Page"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-general.php:60
+#: includes/settings/class-alg-wc-msrp-settings-general.php:60
 msgid "Archives"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:45
-#, php-format
+#: includes/settings/class-alg-wc-msrp-settings-section.php:45
 msgid "Replaced value: %s."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:45
-#, php-format
+#: includes/settings/class-alg-wc-msrp-settings-section.php:45
 msgid "Replaced values: %s."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:58
-#, php-format
+#: includes/settings/class-alg-wc-msrp-settings-section.php:58
 msgid "%s Display Options"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:63
+#: includes/settings/class-alg-wc-msrp-settings-section.php:63
 msgid "Display"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:68
+#: includes/settings/class-alg-wc-msrp-settings-section.php:68
 msgid "Do not show"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:69
+#: includes/settings/class-alg-wc-msrp-settings-section.php:69
 msgid "Show"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:70
+#: includes/settings/class-alg-wc-msrp-settings-section.php:70
 msgid "Only show if MSRP is higher than the standard price"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:71
+#: includes/settings/class-alg-wc-msrp-settings-section.php:71
 msgid "Only show if MSRP differs from the standard price"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:75
+#: includes/settings/class-alg-wc-msrp-settings-section.php:75
 msgid "Position"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:80
+#: includes/settings/class-alg-wc-msrp-settings-section.php:80
 msgid "Before the standard price"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:81
+#: includes/settings/class-alg-wc-msrp-settings-section.php:81
 msgid "After the standard price"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:82
+#: includes/settings/class-alg-wc-msrp-settings-section.php:82
 msgid "Instead of the standard price"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:87
+#: includes/settings/class-alg-wc-msrp-settings-section.php:87
 msgid "Text Format"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:92
+#: includes/settings/class-alg-wc-msrp-settings-section.php:92
 msgid "No Format"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:93
+#: includes/settings/class-alg-wc-msrp-settings-section.php:93
 msgid "Bold"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:94
+#: includes/settings/class-alg-wc-msrp-settings-section.php:94
 msgid "Italic"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:95
+#: includes/settings/class-alg-wc-msrp-settings-section.php:95
 msgid "Strike-through"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:96
+#: includes/settings/class-alg-wc-msrp-settings-section.php:96
 msgid "Underlined"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:101
+#: includes/settings/class-alg-wc-msrp-settings-section.php:101
 msgid "Savings"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:102
-#, php-format
+#: includes/settings/class-alg-wc-msrp-settings-section.php:102
 msgid "Savings amount. To display this, use %s in \"Final Template\""
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:110
-#, php-format
-msgid ""
-"Savings amount in percent. To display this, use %s in \"Final Template\""
+#: includes/settings/class-alg-wc-msrp-settings-section.php:110
+msgid "Savings amount in percent. To display this, use %s in \"Final Template\""
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:118
+#: includes/settings/class-alg-wc-msrp-settings-section.php:118
 msgid "Savings amount in percent - rounding precision"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:125
+#: includes/settings/class-alg-wc-msrp-settings-section.php:125
 msgid "Final Template"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-msrp-settings-section.php:138
+#: includes/settings/class-alg-wc-msrp-settings-section.php:138
 msgid "Template if no MSRP is defined"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-settings-msrp.php:49
+#: includes/settings/class-alg-wc-settings-msrp.php:49
 msgid "Reset Settings"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-settings-msrp.php:54
+#: includes/settings/class-alg-wc-settings-msrp.php:54
 msgid "Reset section settings"
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\includes\settings\class-alg-wc-settings-msrp.php:94
+#: includes/settings/class-alg-wc-settings-msrp.php:94
 msgid "Your settings have been reset."
 msgstr ""
 
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\msrp-for-woocommerce-pro.php:159
-msgid "Settings"
-msgstr ""
-
-#: E:\xampp\htdocs\wpfactory-local\wp-content\plugins\msrp-for-woocommerce-pro\msrp-for-woocommerce-pro.php:162
+#: msrp-for-woocommerce-pro.php:162
 msgid "Unlock All"
 msgstr ""

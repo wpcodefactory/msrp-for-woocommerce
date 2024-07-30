@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, omardabbas, karzin, anbinder, algoritmika, kousikmukherjeeli
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.4
-Tested up to: 6.5
-Stable tag: 1.7.10
+Tested up to: 6.6
+Stable tag: 1.7.11
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -163,6 +163,10 @@ Once activated, access the plugin's settings by navigating to “WooCommerce > S
 
 
 == Changelog ==
+
+= 1.7.11 - 30/07/2024 =
+* WC tested up to: 9.1.
+* Tested up to: 6.6.
 
 = 1.7.10 - 22/04/2024 =
 * WC tested up to: 8.8.

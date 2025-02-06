@@ -2,16 +2,24 @@
 /**
  * MSRP for WooCommerce - Admin & Advanced Section Settings
  *
- * @version 1.3.9
+ * @version 1.8.0
  * @since   1.3.9
  * @author  WPFactory
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_MSRP_Settings_Admin_Advanced' ) ) :
 
 class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
+
+	/**
+	 * Tracks the number of products modified.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $alg_wc_msrp_action_done;
 
 	/**
 	 * Constructor.

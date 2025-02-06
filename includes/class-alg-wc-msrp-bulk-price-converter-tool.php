@@ -2,16 +2,32 @@
 /**
  * Bulk Price Converter - Tool Class
  *
- * @version 1.6.3
+ * @version 1.8.0
  * @since   1.4.0
  * @author  WPFactory
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_MSRP_Bulk_Price_Converter_Tool' ) ) :
 
 class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
+
+	/**
+	 * atts.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $atts;
+
+	/**
+	 * result.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $result;
 
 	/**
 	 * Constructor.
@@ -48,7 +64,7 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 			}
 		}
 	}
-	
+
 	/**
 	 * change_all_products_prices.
 	 *
@@ -82,7 +98,7 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 			if ( 'any' != $atts['product_tags'] ) {
 				$args = apply_filters( 'alg_wc_msrp_bpc_product_query', $args, 'product_tag', $atts['product_tags'] );
 			}
-			
+
 			$loop = new WP_Query( $args );
 			if ( ! $loop->have_posts() ) {
 				break;
@@ -98,14 +114,14 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 				foreach ( $product_ids as $_product_id ) {
 
 					$this->change_price( $_product_id, $product_id, 'alg_msrp', 0, 0 );
-							
+
 				}
 			}
 			$offset += $block_size;
 		}
 		return $this->result;
 	}
-	
+
 	/**
 	 * change_price.
 	 *
@@ -171,7 +187,7 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 					$_product_tags[] = esc_html( $term->name );
 				}
 			}
-			
+
 			$this->result[] = array(
 				get_the_title( $product_id ) . ' (#' . $product_id . ')',
 				implode( ', ', $_product_cats ),

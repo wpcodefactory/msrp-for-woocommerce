@@ -3,19 +3,18 @@
 Plugin Name: MSRP for WooCommerce
 Plugin URI: https://wpfactory.com/item/msrp-for-woocommerce/
 Description: Save and display product MSRP in WooCommerce.
-Version: 1.7.12
+Version: 1.8.0
 Author: WPFactory
 Author URI: https://wpfactory.com/
 Text Domain: msrp-for-woocommerce
 Domain Path: /langs
-Copyright: © 2023 WPFactory
-WC tested up to: 9.2
+WC tested up to: 9.6
 Requires Plugins: woocommerce
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_MSRP' ) ) :
 
@@ -23,7 +22,7 @@ if ( ! class_exists( 'Alg_WC_MSRP' ) ) :
  * Main Alg_WC_MSRP Class
  *
  * @class   Alg_WC_MSRP
- * @version 1.7.11
+ * @version 1.8.0
  * @since   1.0.0
  */
 final class Alg_WC_MSRP {
@@ -34,7 +33,24 @@ final class Alg_WC_MSRP {
 	 * @var   string
 	 * @since 1.0.0
 	 */
-	public $version = '1.7.12';
+	public $version = '1.8.0';
+
+	/**
+	 * Core object.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 * @var     Alg_WC_MSRP_Core class instance
+	 */
+	public $core = null;
+
+	/**
+	 * Setting values.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $settings;
 
 	/**
 	 * @var   Alg_WC_MSRP The single instance of the class
@@ -43,7 +59,7 @@ final class Alg_WC_MSRP {
 	protected static $_instance = null;
 
 	/**
-	 * Main Alg_WC_MSRP Instance
+	 * Main Alg_WC_MSRP Instance.
 	 *
 	 * Ensures only one instance of Alg_WC_MSRP is loaded or can be loaded.
 	 *
@@ -62,7 +78,7 @@ final class Alg_WC_MSRP {
 	/**
 	 * Alg_WC_MSRP Constructor.
 	 *
-	 * @version 1.3.9
+	 * @version 1.8.0
 	 * @since   1.0.0
 	 * @access  public
 	 */
@@ -71,13 +87,21 @@ final class Alg_WC_MSRP {
 		// Check for active plugins
 		if (
 			! $this->is_plugin_active( 'woocommerce/woocommerce.php' ) ||
-			( 'msrp-for-woocommerce.php' === basename( __FILE__ ) && $this->is_plugin_active( 'msrp-for-woocommerce-pro/msrp-for-woocommerce-pro.php' ) )
+			(
+				'msrp-for-woocommerce.php' === basename( __FILE__ ) &&
+				$this->is_plugin_active( 'msrp-for-woocommerce-pro/msrp-for-woocommerce-pro.php' )
+			)
 		) {
 			return;
 		}
 
+		// Load libs
+		if ( is_admin() ) {
+			require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+		}
+
 		// Set up localisation
-		load_plugin_textdomain( 'msrp-for-woocommerce', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
+		add_action( 'init', array( $this, 'localize' ) );
 
 		// Pro
 		if ( 'msrp-for-woocommerce-pro.php' === basename( __FILE__ ) ) {
@@ -91,6 +115,20 @@ final class Alg_WC_MSRP {
 		if ( is_admin() ) {
 			$this->admin();
 		}
+	}
+
+	/**
+	 * localize.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	function localize() {
+		load_plugin_textdomain(
+			'msrp-for-woocommerce',
+			false,
+			dirname( plugin_basename( __FILE__ ) ) . '/langs/'
+		);
 	}
 
 	/**
@@ -115,24 +153,35 @@ final class Alg_WC_MSRP {
 	 * @since   1.0.0
 	 */
 	function includes() {
+
 		// Core
 		$this->core = require_once( 'includes/class-alg-wc-msrp-core.php' );
+
 		// Functions
 		require_once( 'includes/alg-wc-msrp-functions.php' );
-		
+
 		// Tool
 		require_once( 'includes/class-alg-wc-msrp-bulk-price-converter-tool.php' );
+
 	}
 
 	/**
 	 * admin.
 	 *
-	 * @version 1.3.9
+	 * @version 1.8.0
 	 * @since   1.3.2
 	 */
 	function admin() {
+
 		// Action links
 		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'action_links' ) );
+
+		// "Recommendations" page
+		$this->add_cross_selling_library();
+
+		// WC Settings tab as WPFactory submenu item
+		$this->move_wc_settings_tab_to_wpfactory_menu();
+
 		// Settings
 		add_filter( 'woocommerce_get_settings_pages', array( $this, 'add_woocommerce_settings_tab' ) );
 		require_once( 'includes/settings/class-alg-wc-msrp-settings-section.php' );
@@ -141,10 +190,12 @@ final class Alg_WC_MSRP {
 		$this->settings['cart']                   = require_once( 'includes/settings/class-alg-wc-msrp-settings-cart.php' );
 		$this->settings['countries_currencies']   = require_once( 'includes/settings/class-alg-wc-msrp-settings-countries-currencies.php' );
 		$this->settings['admin_advanced']         = require_once( 'includes/settings/class-alg-wc-msrp-settings-admin-advanced.php' );
+
 		// Version update
 		if ( get_option( 'alg_wc_msrp_version', '' ) !== $this->version ) {
 			add_action( 'admin_init', array( $this, 'version_updated' ) );
 		}
+
 	}
 
 	/**
@@ -163,6 +214,50 @@ final class Alg_WC_MSRP {
 				__( 'Unlock All', 'msrp-for-woocommerce' ) . '</a>';
 		}
 		return array_merge( $custom_links, $links );
+	}
+
+	/**
+	 * add_cross_selling_library.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	function add_cross_selling_library() {
+
+		if ( ! class_exists( '\WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling' ) ) {
+			return;
+		}
+
+		$cross_selling = new \WPFactory\WPFactory_Cross_Selling\WPFactory_Cross_Selling();
+		$cross_selling->setup( array( 'plugin_file_path' => __FILE__ ) );
+		$cross_selling->init();
+
+	}
+
+	/**
+	 * move_wc_settings_tab_to_wpfactory_menu.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	function move_wc_settings_tab_to_wpfactory_menu() {
+
+		if ( ! class_exists( '\WPFactory\WPFactory_Admin_Menu\WPFactory_Admin_Menu' ) ) {
+			return;
+		}
+
+		$wpfactory_admin_menu = \WPFactory\WPFactory_Admin_Menu\WPFactory_Admin_Menu::get_instance();
+
+		if ( ! method_exists( $wpfactory_admin_menu, 'move_wc_settings_tab_to_wpfactory_menu' ) ) {
+			return;
+		}
+
+		$wpfactory_admin_menu->move_wc_settings_tab_to_wpfactory_menu( array(
+			'wc_settings_tab_id' => 'alg_wc_msrp',
+			'menu_title'         => __( 'MSRP', 'msrp-for-woocommerce' ),
+			'page_title'         => __( 'MSRP', 'msrp-for-woocommerce' ),
+		) );
+
 	}
 
 	/**

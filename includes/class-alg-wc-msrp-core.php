@@ -2,12 +2,12 @@
 /**
  * MSRP for WooCommerce - Core Class
  *
- * @version 1.3.9
+ * @version 1.8.0
  * @since   1.0.0
  * @author  WPFactory
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_MSRP_Core' ) ) :
 
@@ -20,7 +20,39 @@ class Alg_WC_MSRP_Core {
 	 * @since 1.0.0
 	 */
 	public $alg_wc_msrp_admin_field_label = '';
-	
+
+	/**
+	 * Plugin options.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $options = array();
+
+	/**
+	 * User role check.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $user_role_check;
+
+	/**
+	 * Visitor's country IP address.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $visitors_country_by_ip;
+
+	/**
+	 * saved_get_variable_msrp.
+	 *
+	 * @version 1.8.0
+	 * @since   1.8.0
+	 */
+	public $saved_get_variable_msrp;
+
 	/**
 	 * Constructor.
 	 *
@@ -37,16 +69,14 @@ class Alg_WC_MSRP_Core {
 	 * @todo    [feature] composite products
 	 * @todo    [feature] MSRP per user role (i.e. same as per country / currency)
 	 */
-	
-	
 	function __construct() {
 		if ( 'yes' === get_option( 'alg_wc_msrp_plugin_enabled', 'yes' ) ) {
-			
+
 			$this->alg_wc_msrp_admin_field_label = get_option( 'alg_wc_msrp_admin_field_label', 'MSRP' );
-			if(empty($this->alg_wc_msrp_admin_field_label)){
+			if ( empty( $this->alg_wc_msrp_admin_field_label ) ) {
 				$this->alg_wc_msrp_admin_field_label = 'MSRP';
 			}
-			
+
 			// Init options
 			$this->init_options();
 			// Core
@@ -97,8 +127,7 @@ class Alg_WC_MSRP_Core {
 			if ( 'in_transients' === $this->options['variable_optimization'] ) {
 				add_action( 'woocommerce_delete_product_transients', array( $this, 'delete_product_transient_variable' ), PHP_INT_MAX );
 			}
-			
-			
+
 		}
 	}
 
@@ -867,10 +896,10 @@ class Alg_WC_MSRP_Core {
 	function compare_variable_prices_and_msrp( $product, $cmp ) {
 		foreach ( $this->get_available_variations_ids( $product ) as $variation_id ) {
 			$msrp              = $this->get_msrp( $variation_id );
-			
+
 			$variation_product = wc_get_product( $variation_id );
 			$variation_price   = $variation_product->get_price();
-			
+
 			switch ( $cmp ) {
 				case 'is_equal':
 					if ( $variation_price != $msrp['msrp'] ) {
@@ -911,7 +940,7 @@ class Alg_WC_MSRP_Core {
 	 * @todo    [dev] (maybe) add `%regular_price%` and `%sale_price%` placeholders
 	 */
 	function display( $price_html, $product, $section_id = false ) {
-		
+
 		if ( '' === $price_html && $this->options['do_hide_msrp_for_empty_price'] ) {
 			return $price_html;
 		}
@@ -950,12 +979,12 @@ class Alg_WC_MSRP_Core {
 			$product_id = $this->get_product_id( $product );
 			$msrp_data  = $this->get_msrp( $product_id );
 			$msrp       = $msrp_data['msrp'];
-			
+
 			// price including tax
 			if(!empty($msrp)){
 				$msrp = wc_get_price_to_display($product, array('qty' => 1, 'price' => $msrp ) );
 			}
-			
+
 			$currency   = $msrp_data['currency'];
 			if ( '' == $msrp || 0 == $msrp ) {
 				// for empty msrp
@@ -992,7 +1021,7 @@ class Alg_WC_MSRP_Core {
 			);
 		}
 		$msrp_html = str_replace( array_keys( $replaced_values ), $replaced_values, do_shortcode( $this->options['msrp_display'][ $section_id ]['template'] ) );
-		
+
 		switch ( $this->options['msrp_display'][ $section_id ]['position'] ) {
 			case 'before_price':
 				return $msrp_html . $price_html;

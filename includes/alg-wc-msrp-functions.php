@@ -7,7 +7,7 @@
  * @author  WPFactory
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'alg_wc_msrp_get_product_msrp' ) ) {
 	/**

@@ -2,8 +2,9 @@
 /**
  * MSRP for WooCommerce - Core Class
  *
- * @version 1.8.0
+ * @version 1.8.1
  * @since   1.0.0
+ *
  * @author  WPFactory
  */
 
@@ -56,8 +57,9 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * Constructor.
 	 *
-	 * @version 1.3.6
+	 * @version 1.8.1
 	 * @since   1.0.0
+	 *
 	 * @todo    [dev] (maybe) recheck if `woocommerce_delete_product_transients` should be hooked in admin only
 	 * @todo    [dev] split file into `...admin.php` and `...core.php`
 	 * @todo    [dev] split settings into separate settings sections
@@ -79,20 +81,28 @@ class Alg_WC_MSRP_Core {
 
 			// Init options
 			$this->init_options();
+
+			// Init hooks
+			$this->init_hooks();
+
 			// Core
 			if ( is_admin() ) {
+
 				// MSRP input on admin product page (simple product)
 				add_action( 'woocommerce_product_options_pricing', array( $this, 'add_msrp_input' ) );
 				add_action( 'save_post_product',                   array( $this, 'save_msrp_input' ), PHP_INT_MAX, 2 );
+
 				// MSRP input on admin product page (variable product)
 				add_action( 'woocommerce_variation_options_pricing',            array( $this, 'add_msrp_input_variation' ), 10, 3 );
 				add_action( 'woocommerce_save_product_variation',               array( $this, 'save_msrp_input_variation' ), PHP_INT_MAX, 2 );
 				add_action( 'woocommerce_product_options_general_product_data', array( $this, 'add_msrp_input_variable' ), PHP_INT_MAX );
+
 				// Products columns
 				if ( $this->options['do_add_admin_products_column'] ) {
 					add_filter( 'manage_edit-product_columns',        array( $this, 'add_product_columns' ),    PHP_INT_MAX );
 					add_action( 'manage_product_posts_custom_column', array( $this, 'render_product_columns' ), PHP_INT_MAX );
 				}
+
 				// Quick and bulk edit
 				if ( $this->options['do_add_admin_quick_edit'] || $this->options['do_add_admin_bulk_edit'] ) {
 					if ( $this->options['do_add_admin_quick_edit'] ) {
@@ -105,24 +115,23 @@ class Alg_WC_MSRP_Core {
 					}
 					add_action( 'woocommerce_product_bulk_and_quick_edit', array( $this, 'save_bulk_and_quick_edit_fields' ), PHP_INT_MAX, 2 );
 				}
+
 			} else {
+
 				// Hide regular price for products on sale
 				if ( $this->options['hide_regular_price_for_sale_products'] ) {
 					add_filter( 'woocommerce_get_price_html', array( $this, 'hide_regular_price_for_sale_products' ), 9, 2 );
 				}
-				// Display
-				add_filter( 'woocommerce_get_price_html', array( $this, 'display' ), PHP_INT_MAX, 2 );
-				// Cart display
-				add_filter( 'woocommerce_cart_item_price', array( $this, 'display_in_cart' ), PHP_INT_MAX, 3 );
+
 				// Cart total savings
 				if ( $this->options['cart_total_savings_enabled'] && ! empty( $this->options['cart_total_savings_positions'] ) ) {
 					foreach ( $this->options['cart_total_savings_positions'] as $position ) {
 						add_action( $position, array( $this, 'display_totals_in_cart' ), PHP_INT_MAX );
 					}
 				}
-				// WPML shortcode
-				add_shortcode( 'alg_wc_msrp_wpml', array( $this, 'alg_wc_msrp_wpml' ) );
+
 			}
+
 			// Transients
 			if ( 'in_transients' === $this->options['variable_optimization'] ) {
 				add_action( 'woocommerce_delete_product_transients', array( $this, 'delete_product_transient_variable' ), PHP_INT_MAX );
@@ -192,6 +201,25 @@ class Alg_WC_MSRP_Core {
 		// Custom range format
 		$this->options['custom_range_format_enabled'] = ( 'yes' === get_option( 'alg_wc_msrp_custom_range_format_enabled', 'no' ) );
 		$this->options['custom_range_format']         = get_option( 'alg_wc_msrp_custom_range_format', __( 'From %from%' ) );
+	}
+
+	/**
+	 * init_hooks.
+	 *
+	 * @version 1.8.1
+	 * @since   1.8.1
+	 */
+	function init_hooks() {
+		if ( ! is_admin() || wp_doing_ajax() ) {
+			// Display
+			add_filter( 'woocommerce_get_price_html', array( $this, 'display' ), PHP_INT_MAX, 2 );
+
+			// Cart display
+			add_filter( 'woocommerce_cart_item_price', array( $this, 'display_in_cart' ), PHP_INT_MAX, 3 );
+
+			// WPML shortcode
+			add_shortcode( 'alg_wc_msrp_wpml', array( $this, 'alg_wc_msrp_wpml' ) );
+		}
 	}
 
 	/**

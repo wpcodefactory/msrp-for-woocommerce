@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmu
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.4
 Tested up to: 6.7
-Stable tag: 1.8.0
+Stable tag: 1.8.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,6 +160,9 @@ Very good and quick support. Can recommend.” – ⭐⭐⭐⭐⭐ [xtel.cz](htt
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 1.8.1 - 19/02/2025 =
+* Fix - Resolved MSRP display issue with AJAX.
 
 = 1.8.0 - 06/02/2025 =
 * Fix - Resolved the "dynamic property is deprecated" notice.

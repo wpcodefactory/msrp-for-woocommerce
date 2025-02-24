@@ -2,8 +2,9 @@
 /**
  * MSRP for WooCommerce - Settings
  *
- * @version 1.3.9
+ * @version 2.0.0
  * @since   1.0.0
+ *
  * @author  WPFactory
  */
 
@@ -16,14 +17,30 @@ class Alg_WC_Settings_MSRP extends WC_Settings_Page {
 	/**
 	 * Constructor.
 	 *
-	 * @version 1.3.9
+	 * @version 2.0.0
 	 * @since   1.0.0
 	 */
 	function __construct() {
+
 		$this->id    = 'alg_wc_msrp';
 		$this->label = __( 'MSRP', 'msrp-for-woocommerce' );
 		parent::__construct();
-		add_filter( 'woocommerce_admin_settings_sanitize_option', array( $this, 'unclean_template_textarea' ), PHP_INT_MAX, 3 );
+
+		// Sections
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-msrp-settings-section.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-msrp-settings-general.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-msrp-settings-cart.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-msrp-settings-countries-currencies.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-msrp-settings-admin-advanced.php';
+
+		// Sanitization
+		add_filter(
+			'woocommerce_admin_settings_sanitize_option',
+			array( $this, 'unclean_template_textarea' ),
+			PHP_INT_MAX,
+			3
+		);
+
 	}
 
 	/**
@@ -33,7 +50,11 @@ class Alg_WC_Settings_MSRP extends WC_Settings_Page {
 	 * @since   1.1.0
 	 */
 	function unclean_template_textarea( $value, $option, $raw_value ) {
-		return ( isset( $option['alg_wc_msrp_raw'] ) ? $raw_value : $value );
+		return (
+			isset( $option['alg_wc_msrp_raw'] ) ?
+			$raw_value :
+			$value
+		);
 	}
 
 	/**
@@ -44,24 +65,27 @@ class Alg_WC_Settings_MSRP extends WC_Settings_Page {
 	 */
 	function get_settings() {
 		global $current_section;
-		return array_merge( apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ), array(
+		return array_merge(
+			apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ),
 			array(
-				'title'     => __( 'Reset Settings', 'msrp-for-woocommerce' ),
-				'type'      => 'title',
-				'id'        => $this->id . '_' . $current_section . '_reset_options',
-			),
-			array(
-				'title'     => __( 'Reset section settings', 'msrp-for-woocommerce' ),
-				'desc'      => '<strong>' . __( 'Reset', 'msrp-for-woocommerce' ) . '</strong>',
-				'id'        => $this->id . '_' . $current_section . '_reset',
-				'default'   => 'no',
-				'type'      => 'checkbox',
-			),
-			array(
-				'type'      => 'sectionend',
-				'id'        => $this->id . '_' . $current_section . '_reset_options',
-			),
-		) );
+				array(
+					'title'     => __( 'Reset Settings', 'msrp-for-woocommerce' ),
+					'type'      => 'title',
+					'id'        => $this->id . '_' . $current_section . '_reset_options',
+				),
+				array(
+					'title'     => __( 'Reset section settings', 'msrp-for-woocommerce' ),
+					'desc'      => '<strong>' . __( 'Reset', 'msrp-for-woocommerce' ) . '</strong>',
+					'id'        => $this->id . '_' . $current_section . '_reset',
+					'default'   => 'no',
+					'type'      => 'checkbox',
+				),
+				array(
+					'type'      => 'sectionend',
+					'id'        => $this->id . '_' . $current_section . '_reset_options',
+				),
+			)
+		);
 	}
 
 	/**
@@ -86,12 +110,13 @@ class Alg_WC_Settings_MSRP extends WC_Settings_Page {
 	/**
 	 * admin_notice_settings_reset.
 	 *
-	 * @version 1.3.3
+	 * @version 2.0.0
 	 * @since   1.3.3
 	 */
 	function admin_notice_settings_reset() {
 		echo '<div class="notice notice-warning is-dismissible"><p><strong>' .
-			__( 'Your settings have been reset.', 'msrp-for-woocommerce' ) . '</strong></p></div>';
+			esc_html__( 'Your settings have been reset.', 'msrp-for-woocommerce' ) .
+		'</strong></p></div>';
 	}
 
 	/**

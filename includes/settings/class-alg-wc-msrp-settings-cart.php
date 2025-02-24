@@ -2,8 +2,9 @@
 /**
  * MSRP for WooCommerce - Cart Section Settings
  *
- * @version 1.3.9
+ * @version 2.0.0
  * @since   1.3.9
+ *
  * @author  WPFactory
  */
 
@@ -28,38 +29,53 @@ class Alg_WC_MSRP_Settings_Cart extends Alg_WC_MSRP_Settings_Section {
 	/**
 	 * get_settings.
 	 *
-	 * @version 1.3.9
+	 * @version 2.0.0
 	 * @since   1.3.9
-	 * @todo    [fix] `alg_wc_msrp_display_cart_total_savings_positions`: check which positions are not updated on cart update and remove those positions (with fallback)
+	 *
+	 * @todo    (fix) `alg_wc_msrp_display_cart_total_savings_positions`: check which positions are not updated on cart update and remove those positions (with fallback)
 	 */
 	function get_settings() {
 
-		$cart_settings = $this->get_single_archive_cart_settings( 'cart', __( 'Cart', 'msrp-for-woocommerce' ) );
+		$cart_settings = $this->get_single_archive_cart_settings(
+			'cart',
+			__( 'Cart', 'msrp-for-woocommerce' )
+		);
 
 		$cart_total_savings_settings = array(
 			array(
-				'title'    => __( 'Cart Total Savings Display Options', 'msrp-for-woocommerce' ),
-				'desc'     => __( 'Display total savings in cart.', 'msrp-for-woocommerce' ),
-				'type'     => 'title',
-				'id'       => 'alg_wc_msrp_display_cart_total_savings_options',
+				'title'             => __( 'Cart Total Savings Display Options', 'msrp-for-woocommerce' ),
+				'desc'              => __( 'Display total savings in cart.', 'msrp-for-woocommerce' ),
+				'type'              => 'title',
+				'id'                => 'alg_wc_msrp_display_cart_total_savings_options',
 			),
 			array(
-				'title'    => __( 'Cart total savings', 'msrp-for-woocommerce' ),
-				'desc'     => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
-				'id'       => 'alg_wc_msrp_display_cart_total_savings_enabled',
-				'default'  => 'no',
-				'type'     => 'checkbox',
-				'desc_tip' => apply_filters( 'alg_wc_msrp_settings', sprintf( 'You will need %s plugin to enable "Cart total savings" section.',
-					'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' . 'MSRP for WooCommerce Pro' . '</a>' ) ),
-				'custom_attributes' => apply_filters( 'alg_wc_msrp_settings', array( 'disabled' => 'disabled' ) ),
+				'title'             => __( 'Cart total savings', 'msrp-for-woocommerce' ),
+				'desc'              => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
+				'id'                => 'alg_wc_msrp_display_cart_total_savings_enabled',
+				'default'           => 'no',
+				'type'              => 'checkbox',
+				'desc_tip'          => apply_filters(
+					'alg_wc_msrp_settings',
+					sprintf(
+						'You will need %s plugin to enable "Cart total savings" section.',
+						'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' .
+							'MSRP (RRP) Pricing for WooCommerce Pro' .
+						'</a>'
+					)
+				),
+				'custom_attributes' => apply_filters(
+					'alg_wc_msrp_settings',
+					array( 'disabled' => 'disabled' )
+				),
 			),
 			array(
-				'title'    => __( 'Position(s)', 'msrp-for-woocommerce' ),
-				'id'       => 'alg_wc_msrp_display_cart_total_savings_positions',
-				'default'  => array(),
-				'type'     => 'multiselect',
-				'class'    => 'chosen_select',
-				'options'  => array(
+				'title'             => __( 'Position(s)', 'msrp-for-woocommerce' ),
+				'id'                => 'alg_wc_msrp_display_cart_total_savings_positions',
+				'default'           => array(),
+				'type'              => 'multiselect',
+				'class'             => 'chosen_select',
+				'options'           => array(
+
 					'woocommerce_before_cart'                    => __( 'Before cart', 'msrp-for-woocommerce' ),
 					'woocommerce_before_cart_table'              => __( 'Before cart table', 'msrp-for-woocommerce' ),
 					'woocommerce_before_cart_contents'           => __( 'Before cart contents', 'msrp-for-woocommerce' ),
@@ -81,21 +97,28 @@ class Alg_WC_MSRP_Settings_Cart extends Alg_WC_MSRP_Settings_Section {
 
 					'woocommerce_before_shipping_calculator'     => __( 'Before shipping calculator', 'msrp-for-woocommerce' ),
 					'woocommerce_after_shipping_calculator'      => __( 'After shipping calculator', 'msrp-for-woocommerce' ),
+
 				),
 			),
 			array(
-				'title'    => __( 'Template', 'msrp-for-woocommerce' ),
-				'desc'     => $this->message_replaced_values( array( '%total_savings%' ) ) . ' ' .
-					sprintf( __( 'You can also use shortcodes here, e.g.: %s.', 'msrp-for-woocommerce' ), '<code>[alg_wc_msrp_wpml lang="en"][/alg_wc_msrp_wpml]</code>' ),
-				'id'       => 'alg_wc_msrp_display_cart_total_savings_template',
-				'default'  => '<div class="price"><label for="alg_wc_msrp_total_savings">You save</label>: <span id="alg_wc_msrp_total_savings">%total_savings%</span></div>',
-				'type'     => 'textarea',
-				'css'      => 'width:100%;',
-				'alg_wc_msrp_raw' => true,
+				'title'             => __( 'Template', 'msrp-for-woocommerce' ),
+				'desc'              => (
+					$this->message_replaced_values( array( '%total_savings%' ) ) . ' ' .
+					sprintf(
+						/* Translators: %s: Shortcode example. */
+						__( 'You can also use shortcodes here, e.g.: %s.', 'msrp-for-woocommerce' ),
+						'<code>[alg_wc_msrp_wpml lang="en"][/alg_wc_msrp_wpml]</code>'
+					)
+				),
+				'id'                => 'alg_wc_msrp_display_cart_total_savings_template',
+				'default'           => '<div class="price"><label for="alg_wc_msrp_total_savings">You save</label>: <span id="alg_wc_msrp_total_savings">%total_savings%</span></div>',
+				'type'              => 'textarea',
+				'css'               => 'width:100%;',
+				'alg_wc_msrp_raw'   => true,
 			),
 			array(
-				'type'     => 'sectionend',
-				'id'       => 'alg_wc_msrp_display_cart_total_savings_options',
+				'type'              => 'sectionend',
+				'id'                => 'alg_wc_msrp_display_cart_total_savings_options',
 			),
 		);
 

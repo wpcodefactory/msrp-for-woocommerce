@@ -2,8 +2,9 @@
 /**
  * MSRP for WooCommerce - Countries & Currencies Section Settings
  *
- * @version 1.3.9
+ * @version 2.0.0
  * @since   1.3.9
+ *
  * @author  WPFactory
  */
 
@@ -28,38 +29,51 @@ class Alg_WC_MSRP_Settings_Countries_Currencies extends Alg_WC_MSRP_Settings_Sec
 	/**
 	 * get_settings.
 	 *
-	 * @version 1.3.9
+	 * @version 2.0.0
 	 * @since   1.3.9
 	 */
 	function get_settings() {
 
+		// Country Options
 		$all_countries = WC()->countries->get_countries();
 		$countries_settings = array(
 			array(
-				'title'    => __( 'Countries Options', 'msrp-for-woocommerce' ),
-				'desc'     => __( 'Fill in this optional section, if you want to save different MSRP values for different countries.', 'msrp-for-woocommerce' ) . ' ' .
-					__( 'Country will be detected automatically by visitor\'s IP address.', 'msrp-for-woocommerce' ),
-				'type'     => 'title',
-				'id'       => 'alg_wc_msrp_countries_options',
+				'title'             => __( 'Countries Options', 'msrp-for-woocommerce' ),
+				'desc'              => (
+					__( 'Fill in this optional section, if you want to save different MSRP values for different countries.', 'msrp-for-woocommerce' ) . ' ' .
+					__( 'Country will be detected automatically by visitor\'s IP address.', 'msrp-for-woocommerce' )
+				),
+				'type'              => 'title',
+				'id'                => 'alg_wc_msrp_countries_options',
 			),
 			array(
-				'title'    => __( 'MSRP by country', 'msrp-for-woocommerce' ),
-				'desc'     => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
-				'id'       => 'alg_wc_msrp_by_country_enabled',
-				'default'  => 'no',
-				'type'     => 'checkbox',
-				'desc_tip' => apply_filters( 'alg_wc_msrp_settings', sprintf( 'You will need %s plugin to enable "MSRP by country" section.',
-					'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' . 'MSRP for WooCommerce Pro' . '</a>' ) ),
-				'custom_attributes' => apply_filters( 'alg_wc_msrp_settings', array( 'disabled' => 'disabled' ) ),
+				'title'             => __( 'MSRP by country', 'msrp-for-woocommerce' ),
+				'desc'              => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
+				'id'                => 'alg_wc_msrp_by_country_enabled',
+				'default'           => 'no',
+				'type'              => 'checkbox',
+				'desc_tip'          => apply_filters(
+					'alg_wc_msrp_settings',
+					sprintf(
+						'You will need %s plugin to enable "MSRP by country" section.',
+						'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' .
+							'MSRP (RRP) Pricing for WooCommerce Pro' .
+						'</a>'
+					)
+				),
+				'custom_attributes' => apply_filters(
+					'alg_wc_msrp_settings',
+					array( 'disabled' => 'disabled' )
+				),
 			),
 			array(
-				'title'    => __( 'Countries', 'msrp-for-woocommerce' ),
-				'desc_tip' => __( 'Save changes to see new options.', 'msrp-for-woocommerce' ),
-				'id'       => 'alg_wc_msrp_countries',
-				'default'  => '',
-				'type'     => 'multiselect',
-				'class'    => 'chosen_select',
-				'options'  => $all_countries,
+				'title'             => __( 'Countries', 'msrp-for-woocommerce' ),
+				'desc_tip'          => __( 'Save changes to see new options.', 'msrp-for-woocommerce' ),
+				'id'                => 'alg_wc_msrp_countries',
+				'default'           => '',
+				'type'              => 'multiselect',
+				'class'             => 'chosen_select',
+				'options'           => $all_countries,
 			),
 		);
 		$countries = get_option( 'alg_wc_msrp_countries', '' );
@@ -67,53 +81,70 @@ class Alg_WC_MSRP_Settings_Countries_Currencies extends Alg_WC_MSRP_Settings_Sec
 			foreach ( $countries as $country_code ) {
 				$countries_settings = array_merge( $countries_settings, array(
 					array(
-						'title'    => ( isset( $all_countries[ $country_code ] ) ? $all_countries[ $country_code ] . ' [' . $country_code . ']' : $country_code ),
-						'id'       => 'alg_wc_msrp_countries_currencies[' . $country_code . ']',
-						'default'  => get_woocommerce_currency(),
-						'type'     => 'select',
-						'class'    => 'wc-enhanced-select',
-						'options'  => get_woocommerce_currencies(),
+						'title'     => (
+							isset( $all_countries[ $country_code ] ) ?
+							$all_countries[ $country_code ] . ' [' . $country_code . ']' :
+							$country_code
+						),
+						'id'        => 'alg_wc_msrp_countries_currencies[' . $country_code . ']',
+						'default'   => get_woocommerce_currency(),
+						'type'      => 'select',
+						'class'     => 'wc-enhanced-select',
+						'options'   => get_woocommerce_currencies(),
 					),
 				) );
 			}
 		}
 		$countries_settings = array_merge( $countries_settings, array(
 			array(
-				'type'     => 'sectionend',
-				'id'       => 'alg_wc_msrp_countries_options',
+				'type'              => 'sectionend',
+				'id'                => 'alg_wc_msrp_countries_options',
 			),
 		) );
 
+		// Currency Options
 		$currencies_settings = array(
 			array(
-				'title'    => __( 'Currencies Options', 'msrp-for-woocommerce' ),
-				'desc'     => __( 'Fill in this optional section, if you want to save different MSRP values for different currencies.', 'msrp-for-woocommerce' ) . ' ' .
-					__( 'Currency can be switched with some external currency switcher plugin.', 'msrp-for-woocommerce' ),
-				'type'     => 'title',
-				'id'       => 'alg_wc_msrp_currencies_options',
+				'title'             => __( 'Currencies Options', 'msrp-for-woocommerce' ),
+				'desc'              => (
+					__( 'Fill in this optional section, if you want to save different MSRP values for different currencies.', 'msrp-for-woocommerce' ) . ' ' .
+					__( 'Currency can be switched with some external currency switcher plugin.', 'msrp-for-woocommerce' )
+				),
+				'type'              => 'title',
+				'id'                => 'alg_wc_msrp_currencies_options',
 			),
 			array(
-				'title'    => __( 'MSRP by currency', 'msrp-for-woocommerce' ),
-				'desc'     => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
-				'id'       => 'alg_wc_msrp_by_currency_enabled',
-				'default'  => 'no',
-				'type'     => 'checkbox',
-				'desc_tip' => apply_filters( 'alg_wc_msrp_settings', sprintf( 'You will need %s plugin to enable "MSRP by currency" section.',
-					'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' . 'MSRP for WooCommerce Pro' . '</a>' ) ),
-				'custom_attributes' => apply_filters( 'alg_wc_msrp_settings', array( 'disabled' => 'disabled' ) ),
+				'title'             => __( 'MSRP by currency', 'msrp-for-woocommerce' ),
+				'desc'              => '<strong>' . __( 'Enable section', 'msrp-for-woocommerce' ) . '</strong>',
+				'id'                => 'alg_wc_msrp_by_currency_enabled',
+				'default'           => 'no',
+				'type'              => 'checkbox',
+				'desc_tip'          => apply_filters(
+					'alg_wc_msrp_settings',
+					sprintf(
+						'You will need %s plugin to enable "MSRP by currency" section.',
+						'<a target="_blank" href="https://wpfactory.com/item/msrp-for-woocommerce/">' .
+							'MSRP (RRP) Pricing for WooCommerce Pro' .
+						'</a>'
+					)
+				),
+				'custom_attributes' => apply_filters(
+					'alg_wc_msrp_settings',
+					array( 'disabled' => 'disabled' )
+				),
 			),
 			array(
-				'title'    => __( 'Currencies', 'msrp-for-woocommerce' ),
-				'desc_tip' => __( 'Selected currencies will appear on each product\'s edit page.', 'msrp-for-woocommerce' ),
-				'id'       => 'alg_wc_msrp_currencies',
-				'default'  => '',
-				'type'     => 'multiselect',
-				'class'    => 'chosen_select',
-				'options'  => get_woocommerce_currencies(),
+				'title'             => __( 'Currencies', 'msrp-for-woocommerce' ),
+				'desc_tip'          => __( 'Selected currencies will appear on each product\'s edit page.', 'msrp-for-woocommerce' ),
+				'id'                => 'alg_wc_msrp_currencies',
+				'default'           => '',
+				'type'              => 'multiselect',
+				'class'             => 'chosen_select',
+				'options'           => get_woocommerce_currencies(),
 			),
 			array(
-				'type'     => 'sectionend',
-				'id'       => 'alg_wc_msrp_currencies_options',
+				'type'              => 'sectionend',
+				'id'                => 'alg_wc_msrp_currencies_options',
 			),
 		);
 

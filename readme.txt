@@ -3,7 +3,7 @@ Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmu
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.4
 Tested up to: 6.7
-Stable tag: 1.8.1
+Stable tag: 2.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,7 +15,7 @@ Show product Manufacturer's Suggested Retail Price (MSRP) in WooCommerce in your
 
 [Main Page](https://wpfactory.com/item/msrp-for-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Main Page") | [Demo](https://msrp.instawp.xyz/ "Demo") | [Support Forum](https://wpfactory.com/support/item/msrp-for-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Support Forum") | [Documentation & How to](https://wpfactory.com/docs/msrp-for-woocommerce/?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme?utm_source=wporg&utm_medium=organic&utm_campaign=readme "Documentation & How to")
 
-**MSRP for WooCommerce** plugin is your solution to integrate and show product Manufacturer's Suggested Retail Prices (MSRP) within your WooCommerce store.
+**MSRP (RRP) Pricing for WooCommerce** plugin is your solution to integrate and show product Manufacturer's Suggested Retail Prices (MSRP) within your WooCommerce store.
 
 With full control on where the MSRP should be visible, you gain full control over how it's communicated to your customers, ensuring transparency and clarity while optimizing your sales strategy.
 
@@ -161,6 +161,15 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 
 == Changelog ==
 
+= 2.0.0 - 23/02/2025 =
+* Dev - Security - Escape output.
+* Dev - Security - Sanitize input.
+* Dev - Security - Nonces added.
+* Dev - Init the plugin on the `plugins_loaded` action.
+* Dev - Update admin settings descriptions.
+* Dev - Code refactoring and cleanup.
+* Dev - Improve coding standards.
+
 = 1.8.1 - 19/02/2025 =
 * Fix - Resolved MSRP display issue with AJAX.
 
@@ -190,8 +199,8 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 * Update plugin icon, banner.
 
 = 1.7.8 - 09/08/2023 =
+* Dev - Compatibility with HPOS.
 * WC tested up to: 7.9.
-* Compatibility with HPOS.
 
 = 1.7.7 - 17/06/2023 =
 * WC tested up to: 7.8.
@@ -201,74 +210,82 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 * Move to WPFactory.
 
 = 1.7.5 - 06/02/2023 =
-* Verified compatibility with WooCommerce 7.3.
+* WC tested up to: 7.3.
 
 = 1.7.4 - 04/11/2022 =
-* Verified compatibility with WordPress 6.1 & WooCommerce 7.0.
+* WC tested up to: 7.0.
+* Tested up to: 6.1.
 
 = 1.7.3 - 24/08/2022 =
-* Fixed a bug showing MSRP on variations without MSRP.
-* Verified compatibility with WooCommerce 6.8.
+* Fix - Fixed a bug showing MSRP on variations without MSRP.
+* WC tested up to: 6.8.
 
 = 1.7.2 - 12/06/2022 =
-* Verified compatibility with WordPress 6.0 & WooCommerce 6.5.
+* WC tested up to: 6.5.
+* Tested up to: 6.0.
 
 = 1.7.1 - 19/03/2022 =
-* Verified compatibility with WooCommerce 6.3.
+* WC tested up to: 6.3.
 
-= 1.7 - 28/01/2022 =
-* Verified compatibility with WordPress 5.9 & WooCommerce 6.1.
-* New Feature: You can bulk edit MSRP prices for all your products at once (or by category).
+= 1.7.0 - 28/01/2022 =
+* Dev - New Feature: You can bulk edit MSRP prices for all your products at once (or by category).
+* WC tested up to: 6.1.
+* Tested up to: 5.9.
 
 = 1.6.4 - 26/08/2021 =
-* Verified compatibility with WooCommerce 5.9.
+* WC tested up to: 5.9.
 
 = 1.6.3 - 26/08/2021 =
-* Checked & verified compatibility with Woo 5.6.
+* WC tested up to: 5.6.
 
 = 1.6.2 - 25/07/2021 =
-* Verified compatibilty with WC 5.5 & WP 5.8.
+* WC tested up to: 5.5.
+* Tested up to: 5.8.
 
 = 1.6.1 - 17/05/2021 =
-* Verified compatibility with WooCommerce 5.3.
+* WC tested up to: 5.3.
 
-= 1.6 - 03/05/2021 =
-* Added a new template for products without MSRP defined.
-* Allowed changing the field label (product backend) that defines the MSRP price.
+= 1.6.0 - 03/05/2021 =
+* Dev - Added a new template for products without MSRP defined.
+* Dev - Allowed changing the field label (product backend) that defines the MSRP price.
 
 = 1.5.6 - 20/04/2021 =
-* Tested compatibilty with WC 5.2 & WP 5.7.
+* WC tested up to: 5.2.
+* Tested up to: 5.7.
 
 = 1.5.5 - 28/02/2021 =
-* Tested compatibilty with WC 5.0.
+* WC tested up to: 5.0.
 
 = 1.5.4 - 07/02/2021 =
-* Enhanced %price% tag to work with tax-included prices.
+* Dev - Enhanced `%price%` tag to work with tax-included prices.
 
 = 1.5.3 - 27/01/2021 =
-* Tested compatibility with WC 4.9 & WP 5.6.
+* WC tested up to: 4.9.
+* Tested up to: 5.6.
 
 = 1.5.2 - 21/11/2020 =
-* Tested compatibility with WC 4.7.
+* WC tested up to: 4.7.
 
 = 1.5.1 - 24/08/2020 =
-* Added a new dropdown menu that allows choosing MSRP text format: Bold / Italic / Underlined / Strike-through.
-* Fixed a bug in variable MSRP pricing when selecting "Only show MSRP if higher than Regular Price".
+* Fix - Fixed a bug in variable MSRP pricing when selecting "Only show MSRP if higher than Regular Price".
+* Dev - Added a new dropdown menu that allows choosing MSRP text format: Bold / Italic / Underlined / Strike-through.
 
-= 1.5 - 15/08/2020 =
-* Changed MSRP field to read tax as per WC settings (if prices include / exclude tax).
-* Tested compatibility with WP 5.5 & WC 4.3.
+= 1.5.0 - 15/08/2020 =
+* Dev - Changed MSRP field to read tax as per WC settings (if prices include / exclude tax).
+* WC tested up to: 4.3.
+* Tested up to: 5.5.
 
 = 1.4.3 - 28/04/2020 =
-* Tested compatibility with WP 5.4 & WC 4.0.
+* WC tested up to: 4.0.
+* Tested up to: 5.4.
 
 = 1.4.2 - 15/03/2020 =
-* Fix: Geolocate pricing was not working when using multiple countries and/or currencies.
+* Fix - Geolocate pricing was not working when using multiple countries and/or currencies.
 
 = 1.4.1 - 02/01/2020 =
-* Text updates over the plugin pages.
-* Copyrights Update.
-* Added a section to review the plugin.
+* Dev - Text updates over the plugin pages.
+* Dev - Added a section to review the plugin.
+* Copyrights update.
 
 = 1.4.0 - 23/12/2019 =
 * Dev - Plugin author updated.
@@ -307,7 +324,7 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 * Dev - Tools - "Copy all products prices to MSRP" tool added.
 * Dev - Tools - "Delete all products MSRP meta" tool added.
 * Dev - Functions - `alg_wc_msrp_get_product_msrp()` function added.
-* Dev - Plugin's data (i.e. options and meta) is now deleted on uninstall (i.e. `uninstall.php` added).
+* Dev - Plugin's data (i.e., options and meta) is now deleted on uninstall (i.e., `uninstall.php` added).
 
 = 1.3.3 - 26/02/2019 =
 * Dev - Position - "Instead of the standard price" option (and `%price%` replaced value) added.

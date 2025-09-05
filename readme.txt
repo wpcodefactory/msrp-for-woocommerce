@@ -1,9 +1,9 @@
 === MSRP (RRP) Pricing for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli, aegkr
+Contributors: wpcodefactory, anbinder, karzin, omardabbas, kousikmukherjeeli, aegkr
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.4
-Tested up to: 6.7
-Stable tag: 2.0.0
+Tested up to: 6.8
+Stable tag: 2.0.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,6 +160,10 @@ Very good and quick support. Can recommend.” – ⭐⭐⭐⭐⭐ [xtel.cz](htt
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 2.0.1 - 05/09/2025 =
+* WC tested up to: 10.1.
+* Tested up to: 6.8.
 
 = 2.0.0 - 23/02/2025 =
 * Dev - Security - Escape output.

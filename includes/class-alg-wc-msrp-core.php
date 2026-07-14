@@ -2,7 +2,7 @@
 /**
  * MSRP for WooCommerce - Core Class
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  WPFactory
@@ -13,16 +13,6 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'Alg_WC_MSRP_Core' ) ) :
 
 class Alg_WC_MSRP_Core {
-
-	/**
-	 * Admin MSRP Label.
-	 *
-	 * @version 1.0.0
-	 * @since   1.0.0
-	 *
-	 * @var     array
-	 */
-	public $alg_wc_msrp_admin_field_label = '';
 
 	/**
 	 * Plugin options.
@@ -59,7 +49,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.0.0
 	 *
 	 * @todo    (dev) recheck if `woocommerce_delete_product_transients` should be hooked in admin only?
@@ -75,12 +65,6 @@ class Alg_WC_MSRP_Core {
 	 */
 	function __construct() {
 		if ( 'yes' === get_option( 'alg_wc_msrp_plugin_enabled', 'yes' ) ) {
-
-			// Admin field Label
-			$this->alg_wc_msrp_admin_field_label = get_option( 'alg_wc_msrp_admin_field_label', '' );
-			if ( empty( $this->alg_wc_msrp_admin_field_label ) ) {
-				$this->alg_wc_msrp_admin_field_label = __( 'MSRP', 'msrp-for-woocommerce' );
-			}
 
 			// Init options
 			$this->init_options();
@@ -125,14 +109,24 @@ class Alg_WC_MSRP_Core {
 							PHP_INT_MAX
 						);
 					}
-					add_action( 'woocommerce_product_bulk_and_quick_edit', array( $this, 'save_bulk_and_quick_edit_fields' ), PHP_INT_MAX, 2 );
+					add_action(
+						'woocommerce_product_bulk_and_quick_edit',
+						array( $this, 'save_bulk_and_quick_edit_fields' ),
+						PHP_INT_MAX,
+						2
+					);
 				}
 
 			} else {
 
 				// Hide regular price for products on sale
 				if ( $this->options['hide_regular_price_for_sale_products'] ) {
-					add_filter( 'woocommerce_get_price_html', array( $this, 'hide_regular_price_for_sale_products' ), 9, 2 );
+					add_filter(
+						'woocommerce_get_price_html',
+						array( $this, 'hide_regular_price_for_sale_products' ),
+						9,
+						2
+					);
 				}
 
 				// Cart total savings
@@ -149,7 +143,11 @@ class Alg_WC_MSRP_Core {
 
 			// Transients
 			if ( 'in_transients' === $this->options['variable_optimization'] ) {
-				add_action( 'woocommerce_delete_product_transients', array( $this, 'delete_product_transient_variable' ), PHP_INT_MAX );
+				add_action(
+					'woocommerce_delete_product_transients',
+					array( $this, 'delete_product_transient_variable' ),
+					PHP_INT_MAX
+				);
 			}
 
 		}
@@ -158,7 +156,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * init_options.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.1.0
 	 *
 	 * @todo    (dev) load only required options on back/front end?
@@ -225,8 +223,6 @@ class Alg_WC_MSRP_Core {
 
 		// Custom range format
 		$this->options['custom_range_format_enabled'] = ( 'yes' === get_option( 'alg_wc_msrp_custom_range_format_enabled', 'no' ) );
-		$this->options['custom_range_format']         = get_option( 'alg_wc_msrp_custom_range_format', __( 'From %from%', 'msrp-for-woocommerce' ) ); // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-
 	}
 
 	/**
@@ -267,12 +263,17 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * get_admin_field_label.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   2.0.0
 	 */
 	function get_admin_field_label( $currency = '', $country_code = '' ) {
+		$label = get_option( 'alg_wc_msrp_admin_field_label', '' );
+
+		if ( '' === $label ) {
+			$label = __( 'MSRP', 'msrp-for-woocommerce' );
+		}
 		return (
-			$this->alg_wc_msrp_admin_field_label .
+			$label .
 			( '' !== $country_code ? ' [' . $country_code . ']' : '' ) .
 			' (' . $this->get_full_woocommerce_currency_symbol( $currency ) . ')'
 		);
@@ -505,7 +506,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * alg_wc_msrp_wpml.
 	 *
-	 * @version 1.1.0
+	 * @version 2.1.0
 	 * @since   1.1.0
 	 */
 	function alg_wc_msrp_wpml( $atts, $content = '' ) {
@@ -530,7 +531,7 @@ class Alg_WC_MSRP_Core {
 				}
 			}
 		}
-		return $content;
+		return wp_kses_post( $content );
 	}
 
 	/**
@@ -609,7 +610,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * save_msrp_input_variation.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.0.0
 	 */
 	function save_msrp_input_variation( $variation_id, $i ) {
@@ -623,7 +624,7 @@ class Alg_WC_MSRP_Core {
 					"alg_wc_msrp_variation_{$i}_nonce"
 				)
 			) {
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'msrp-for-woocommerce' ) );
 			}
 
 			// Update MSRP
@@ -729,7 +730,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * save_msrp_input.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.0.0
 	 */
 	function save_msrp_input( $post_id, $__post ) {
@@ -746,7 +747,7 @@ class Alg_WC_MSRP_Core {
 					'alg_wc_msrp_nonce'
 				)
 			) {
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'msrp-for-woocommerce' ) );
 			}
 
 			// Update MSRP
@@ -860,7 +861,7 @@ class Alg_WC_MSRP_Core {
 		if ( empty( $location['country'] ) ) {
 			$location = wc_format_country_state_string(
 				apply_filters(
-					'woocommerce_customer_default_location',
+					'woocommerce_customer_default_location', // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 					$this->options['default_wc_country']
 				)
 			);
@@ -931,7 +932,7 @@ class Alg_WC_MSRP_Core {
 			$msrp = apply_filters( 'alg_wc_msrp', $this->get_post_or_parent_meta( $product_id, '_alg_msrp' ), $product_id );
 		}
 		if ( $this->options['is_msrp_apply_price_filter_enabled'] ) {
-			$msrp = apply_filters( $this->options['wc_price_filter'], $msrp, wc_get_product( $product_id ) );
+			$msrp = apply_filters( $this->options['wc_price_filter'], $msrp, wc_get_product( $product_id ) ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound
 		}
 		if ( ! empty( $msrp ) ) {
 			$msrp = str_replace( ',', '.', $msrp );
@@ -947,7 +948,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * Format a price range for display.
 	 *
-	 * @version 1.3.6
+	 * @version 2.1.0
 	 * @since   1.1.0
 	 *
 	 * @param   string $from Price from.
@@ -958,12 +959,17 @@ class Alg_WC_MSRP_Core {
 		$from = ( is_numeric( $from ) ? wc_price( $from, array( 'currency' => $currency_from ) ) : $from );
 		$to   = ( is_numeric( $to )   ? wc_price( $to,   array( 'currency' => $currency_to ) )   : $to );
 		return ( $this->options['custom_range_format_enabled'] ?
-			str_replace( array( '%from%', '%to%' ), array( $from, $to ), $this->options['custom_range_format'] ) :
+			str_replace(
+				array( '%from%', '%to%' ),
+				array( $from, $to ),
+				/* Translators: %from%: Price. */
+				get_option( 'alg_wc_msrp_custom_range_format', __( 'From %from%', 'msrp-for-woocommerce' ) )
+			) :
 			apply_filters(
-				'woocommerce_format_price_range',
+				'woocommerce_format_price_range', // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 				sprintf(
 					/* Translators: %1$s: Price from, %2$s: Price to. */
-					_x( '%1$s &ndash; %2$s', 'Price range: from-to', 'woocommerce' ), // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
+					_x( '%1$s &ndash; %2$s', 'Price range: from-to', 'msrp-for-woocommerce' ),
 					$from,
 					$to
 				),
@@ -976,7 +982,7 @@ class Alg_WC_MSRP_Core {
 	/**
 	 * Format a range for display.
 	 *
-	 * @version 1.3.6
+	 * @version 2.1.0
 	 * @since   1.1.0
 	 *
 	 * @param   string $from Value from.
@@ -985,7 +991,12 @@ class Alg_WC_MSRP_Core {
 	 */
 	function format_range( $from, $to ) {
 		return ( $this->options['custom_range_format_enabled'] ?
-			str_replace( array( '%from%', '%to%' ), array( $from, $to ), $this->options['custom_range_format'] ) :
+			str_replace(
+				array( '%from%', '%to%' ),
+				array( $from, $to ),
+				/* Translators: %from%: Price. */
+				get_option( 'alg_wc_msrp_custom_range_format', __( 'From %from%', 'msrp-for-woocommerce' ) )
+			) :
 			sprintf( '%1$s &ndash; %2$s', $from, $to )
 		);
 	}
@@ -1033,7 +1044,12 @@ class Alg_WC_MSRP_Core {
 
 			// Filter 'woocommerce_hide_invisible_variations' to optionally hide invisible variations (disabled variations and variations with empty price).
 			if (
-				apply_filters( 'woocommerce_hide_invisible_variations', true, $product->get_id(), $variation ) &&
+				apply_filters(
+					'woocommerce_hide_invisible_variations', // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+					true,
+					$product->get_id(),
+					$variation
+				) &&
 				! $variation->variation_is_visible()
 			) {
 				continue;

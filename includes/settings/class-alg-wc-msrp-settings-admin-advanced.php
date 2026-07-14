@@ -2,7 +2,7 @@
 /**
  * MSRP for WooCommerce - Admin & Advanced Section Settings
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.3.9
  *
  * @author  WPFactory
@@ -96,7 +96,7 @@ class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
 	/**
 	 * admin_actions.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.3.4
 	 *
 	 * @todo    (dev) `copy_price_to_msrp`: copy to variable product only if at least one variation MSRP is empty?
@@ -112,7 +112,7 @@ class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
 					sanitize_text_field( wp_unslash( $_GET['alg_wc_msrp_action'] ) )
 				)
 			) {
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'msrp-for-woocommerce' ) );
 			}
 
 			// Check user role
@@ -179,7 +179,7 @@ class Alg_WC_MSRP_Settings_Admin_Advanced extends Alg_WC_MSRP_Settings_Section {
 				),
 			),
 			apply_filters(
-				'editable_roles',
+				'editable_roles', // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 				(
 					(
 						isset( $wp_roles ) &&

@@ -1,9 +1,9 @@
 === MSRP (RRP) Pricing for WooCommerce ===
 Contributors: wpcodefactory, anbinder, karzin, omardabbas, kousikmukherjeeli, aegkr
 Tags: msrp, rrp, marketing, sales, promotion
-Requires at least: 4.4
+Requires at least: 4.7
 Tested up to: 7.0
-Stable tag: 2.0.2
+Stable tag: 2.1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -161,6 +161,19 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 
 == Changelog ==
 
+= 2.1.0 - 14/07/2026 =
+* Fix - Translation loading for domain was triggered too early.
+* Fix - Text domain mismatch fixed.
+* Dev - Shortcode content escaped.
+* Dev - WPFactory Admin Menu - Moved to the `init` hook.
+* Dev - WPFactory Recommendations - Moved to the `init` hook.
+* Dev - WPFactory Key Manager - Moved to the `init` hook.
+* Dev - WPFactory Cross-Selling - Library updated (to v1.1.3).
+* Dev - WPFactory Admin Menu - Library updated (to v1.1.1).
+* Dev - WPFactory Key Manager - Library updated (to v1.0.8).
+* Requires at least: 4.7.
+* WC tested up to: 10.9.
+
 = 2.0.2 - 23/05/2026 =
 * Tested up to: 7.0.
 * WC tested up to: 10.7.
@@ -170,8 +183,8 @@ Once activated, access the plugin's settings by navigating to the â€œWPFactoryâ€
 * Tested up to: 6.8.
 
 = 2.0.0 - 23/02/2025 =
-* Dev - Security - Escape output.
-* Dev - Security - Sanitize input.
+* Dev - Security - Output escaped.
+* Dev - Security - Input sanitized.
 * Dev - Security - Nonces added.
 * Dev - Init the plugin on the `plugins_loaded` action.
 * Dev - Update admin settings descriptions.

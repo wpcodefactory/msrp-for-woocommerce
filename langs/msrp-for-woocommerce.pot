@@ -1,43 +1,51 @@
-# Copyright (C) 2025 WPFactory
+# Copyright (C) 2026 WPFactory
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: msrp-for-woocommerce 2.0.1\n"
+"Project-Id-Version: MSRP (RRP) Pricing for WooCommerce 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/msrp-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-05T17:24:04+00:00\n"
+"POT-Creation-Date: 2026-07-14T17:36:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: msrp-for-woocommerce\n"
 
 #. Plugin Name of the plugin
-#: msrp-for-woocommerce-pro.php
-msgid "MSRP (RRP) Pricing for WooCommerce Pro"
+#: msrp-for-woocommerce.php
+#: includes/settings/class-alg-wc-msrp-settings-general.php:50
+msgid "MSRP (RRP) Pricing for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: msrp-for-woocommerce-pro.php
+#: msrp-for-woocommerce.php
 msgid "https://wpfactory.com/item/msrp-for-woocommerce/"
 msgstr ""
 
 #. Description of the plugin
-#: msrp-for-woocommerce-pro.php
+#: msrp-for-woocommerce.php
 #: includes/settings/class-alg-wc-msrp-settings-general.php:52
 msgid "Save and display product MSRP in WooCommerce."
 msgstr ""
 
 #. Author of the plugin
-#: msrp-for-woocommerce-pro.php
+#: msrp-for-woocommerce.php
 msgid "WPFactory"
 msgstr ""
 
 #. Author URI of the plugin
-#: msrp-for-woocommerce-pro.php
+#: msrp-for-woocommerce.php
 msgid "https://wpfactory.com/"
+msgstr ""
+
+#: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:71
+#: includes/class-alg-wc-msrp-core.php:627
+#: includes/class-alg-wc-msrp-core.php:750
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:115
+msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
 #: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:76
@@ -90,7 +98,6 @@ msgstr ""
 #. Translators: %s: Plugin link.
 #: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:397
 #: includes/class-alg-wc-msrp-bulk-price-converter-tool.php:444
-#, php-format
 msgid "You will need %s plugin to change values in this section."
 msgstr ""
 
@@ -182,31 +189,38 @@ msgstr ""
 msgid "Any"
 msgstr ""
 
-#: includes/class-alg-wc-msrp-core.php:82
-#: includes/class-alg-wc-msrp-core.php:386
-#: includes/class-alg-wc-msrp-core.php:473
-#: includes/class-alg-wc-msrp.php:259
-#: includes/class-alg-wc-msrp.php:260
+#: includes/class-alg-wc-msrp-core.php:273
+#: includes/class-alg-wc-msrp-core.php:387
+#: includes/class-alg-wc-msrp-core.php:474
+#: includes/class-alg-wc-msrp.php:242
+#: includes/class-alg-wc-msrp.php:243
 #: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:308
 #: includes/settings/class-alg-wc-settings-msrp.php:26
 msgid "MSRP"
 msgstr ""
 
-#: includes/class-alg-wc-msrp-core.php:228
-#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:355
-#, php-format
-msgid "From %from%"
-msgstr ""
-
-#: includes/class-alg-wc-msrp-core.php:388
+#: includes/class-alg-wc-msrp-core.php:389
 msgid "- No change -"
 msgstr ""
 
-#: includes/class-alg-wc-msrp.php:209
+#. Translators: %from%: Price.
+#: includes/class-alg-wc-msrp-core.php:966
+#: includes/class-alg-wc-msrp-core.php:998
+#: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:355
+msgid "From %from%"
+msgstr ""
+
+#. Translators: %1$s: Price from, %2$s: Price to.
+#: includes/class-alg-wc-msrp-core.php:972
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: includes/class-alg-wc-msrp.php:192
 msgid "Settings"
 msgstr ""
 
-#: includes/class-alg-wc-msrp.php:214
+#: includes/class-alg-wc-msrp.php:197
 msgid "Go Pro"
 msgstr ""
 
@@ -216,7 +230,6 @@ msgstr ""
 
 #. Translators: %d: Number of products.
 #: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:90
-#, php-format
 msgid "%d product(s) modified."
 msgstr ""
 
@@ -297,7 +310,6 @@ msgstr ""
 
 #. Translators: %s: MSRP.
 #: includes/settings/class-alg-wc-msrp-settings-admin-advanced.php:307
-#, php-format
 msgid "If empty, defaults to %s."
 msgstr ""
 
@@ -483,7 +495,6 @@ msgstr ""
 #: includes/settings/class-alg-wc-msrp-settings-cart.php:109
 #: includes/settings/class-alg-wc-msrp-settings-section.php:184
 #: includes/settings/class-alg-wc-msrp-settings-section.php:212
-#, php-format
 msgid "You can also use shortcodes here, e.g.: %s."
 msgstr ""
 
@@ -553,12 +564,7 @@ msgstr ""
 
 #. Translators: %s: Key name.
 #: includes/settings/class-alg-wc-msrp-settings-general.php:45
-#, php-format
 msgid "Plugin stores MSRP as product meta with %s key."
-msgstr ""
-
-#: includes/settings/class-alg-wc-msrp-settings-general.php:50
-msgid "MSRP (RRP) Pricing for WooCommerce"
 msgstr ""
 
 #: includes/settings/class-alg-wc-msrp-settings-general.php:51
@@ -575,19 +581,16 @@ msgstr ""
 
 #. Translators: %s: Placeholder name.
 #: includes/settings/class-alg-wc-msrp-settings-section.php:72
-#, php-format
 msgid "Replaced value: %s."
 msgstr ""
 
 #. Translators: %s: Placeholder name list.
 #: includes/settings/class-alg-wc-msrp-settings-section.php:74
-#, php-format
 msgid "Replaced values: %s."
 msgstr ""
 
 #. Translators: %s: Section title.
 #: includes/settings/class-alg-wc-msrp-settings-section.php:93
-#, php-format
 msgid "%s Display Options"
 msgstr ""
 
@@ -657,13 +660,11 @@ msgstr ""
 
 #. Translators: %s: Placeholder name.
 #: includes/settings/class-alg-wc-msrp-settings-section.php:142
-#, php-format
 msgid "Savings amount. To display this, use %s in \"Final Template\""
 msgstr ""
 
 #. Translators: %s: Placeholder name.
 #: includes/settings/class-alg-wc-msrp-settings-section.php:156
-#, php-format
 msgid "Savings amount in percent. To display this, use %s in \"Final Template\""
 msgstr ""
 

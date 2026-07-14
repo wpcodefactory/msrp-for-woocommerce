@@ -2,7 +2,7 @@
 /**
  * MSRP for WooCommerce - Main Class
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  WPFactory
@@ -65,7 +65,7 @@ final class Alg_WC_MSRP {
 	/**
 	 * Alg_WC_MSRP Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.0.0
 	 *
 	 * @access  public
@@ -82,9 +82,6 @@ final class Alg_WC_MSRP {
 			require_once plugin_dir_path( ALG_WC_MSRP_FILE ) . 'vendor/autoload.php';
 		}
 
-		// Set up localisation
-		add_action( 'init', array( $this, 'localize' ) );
-
 		// Declare compatibility with custom order tables for WooCommerce
 		add_action( 'before_woocommerce_init', array( $this, 'wc_declare_compatibility' ) );
 
@@ -100,20 +97,6 @@ final class Alg_WC_MSRP {
 		if ( is_admin() ) {
 			$this->admin();
 		}
-	}
-
-	/**
-	 * localize.
-	 *
-	 * @version 2.0.0
-	 * @since   1.8.0
-	 */
-	function localize() {
-		load_plugin_textdomain(
-			'msrp-for-woocommerce',
-			false,
-			dirname( plugin_basename( ALG_WC_MSRP_FILE ) ) . '/langs/'
-		);
 	}
 
 	/**
@@ -163,7 +146,7 @@ final class Alg_WC_MSRP {
 	/**
 	 * admin.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.3.2
 	 */
 	function admin() {
@@ -175,10 +158,10 @@ final class Alg_WC_MSRP {
 		);
 
 		// "Recommendations" page
-		$this->add_cross_selling_library();
+		add_action( 'init', array( $this, 'add_cross_selling_library' ) );
 
 		// WC Settings tab as WPFactory submenu item
-		$this->move_wc_settings_tab_to_wpfactory_menu();
+		add_action( 'init', array( $this, 'move_wc_settings_tab_to_wpfactory_menu' ) );
 
 		// Settings
 		add_filter(

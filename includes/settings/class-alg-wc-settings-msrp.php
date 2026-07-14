@@ -66,7 +66,7 @@ class Alg_WC_Settings_MSRP extends WC_Settings_Page {
 	function get_settings() {
 		global $current_section;
 		return array_merge(
-			apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ),
+			apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 			array(
 				array(
 					'title'     => __( 'Reset Settings', 'msrp-for-woocommerce' ),

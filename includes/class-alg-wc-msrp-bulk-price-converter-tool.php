@@ -2,7 +2,7 @@
 /**
  * Bulk Price Converter - Tool Class
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.7.0
  *
  * @author  WPFactory
@@ -46,7 +46,7 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 	/**
 	 * convert_prices.
 	 *
-	 * @version 2.0.0
+	 * @version 2.1.0
 	 * @since   1.7.0
 	 */
 	function convert_prices() {
@@ -68,7 +68,7 @@ class Alg_WC_MSRP_Bulk_Price_Converter_Tool {
 					'alg_wc_msrp_bpc_action'
 				)
 			) {
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'msrp-for-woocommerce' ) );
 			}
 
 			// Check user role

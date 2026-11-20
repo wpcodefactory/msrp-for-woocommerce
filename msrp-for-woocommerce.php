@@ -3,7 +3,7 @@
 Plugin Name: MSRP (RRP) Pricing for WooCommerce
 Plugin URI: https://wpfactory.com/item/msrp-for-woocommerce/
 Description: Save and display product MSRP in WooCommerce.
-Version: 2.1.0
+Version: 2.1.1
 Author: WPFactory
 Author URI: https://wpfactory.com/
 Text Domain: msrp-for-woocommerce
@@ -36,7 +36,7 @@ if ( 'msrp-for-woocommerce.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_WC_MSRP_VERSION' ) || define( 'ALG_WC_MSRP_VERSION', '2.1.0' );
+defined( 'ALG_WC_MSRP_VERSION' ) || define( 'ALG_WC_MSRP_VERSION', '2.1.1' );
 
 defined( 'ALG_WC_MSRP_FILE' ) || define( 'ALG_WC_MSRP_FILE', __FILE__ );
 

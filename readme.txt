@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, anbinder, karzin, omardabbas, kousikmukherjeeli, aegkr
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.7
-Tested up to: 7.0
-Stable tag: 2.1.0
+Tested up to: 7.1
+Stable tag: 2.1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,6 +160,13 @@ Very good and quick support. Can recommend.” – ⭐⭐⭐⭐⭐ [xtel.cz](htt
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 2.1.1 - 20/11/2026 =
+* Tested up to: 7.1.
+* WC tested up to: 11.3.
+* Dev - Upgraded wpfactory/wpfactory-admin-menu (v1.1.1 => v1.1.4).
+* Dev - Upgraded wpfactory/wpfactory-cross-selling (v1.1.3 => v1.1.7).
+* Dev - Upgraded wpfactory/wpfactory-key-manager (v1.0.8 => v1.1.1).
 
 = 2.1.0 - 14/07/2026 =
 * Fix - Translation loading for domain was triggered too early.

@@ -3,7 +3,7 @@ Contributors: wpcodefactory, anbinder, karzin, omardabbas, kousikmukherjeeli, ae
 Tags: msrp, rrp, marketing, sales, promotion
 Requires at least: 4.7
 Tested up to: 7.1
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,6 +160,9 @@ Very good and quick support. Can recommend.” – ⭐⭐⭐⭐⭐ [xtel.cz](htt
 Once activated, access the plugin's settings by navigating to the “WPFactory” menu and look for the relevant tab.
 
 == Changelog ==
+
+= 2.1.2 - 23/11/2026 =
+* WC tested up to: 11.3.
 
 = 2.1.1 - 20/11/2026 =
 * Tested up to: 7.1.
